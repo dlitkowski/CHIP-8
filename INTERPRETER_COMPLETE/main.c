@@ -1,111 +1,132 @@
+#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
-#include <fcntl.h>
 
 int main(int argc, char *argv[]){
 
-    //Open a file descriptor for the filename provided
+    // Initialize CPU components
+    char memory = malloc(sizeof(char) * 4096);
+    char display = malloc(sizeof(char) * 64 * 32);
+    char regs = malloc(sizeof(char) * 16);
+    int pc = 0x200;
+    short i = 0;
+    char sp = 0;
+    char stack = malloc(48);
+    int delay_timer = 0;
+    int sound_timer = 0; 
+
+    // Open a file descriptor for the filename provided
     int binary_rom = open(argv[1], O_RDONLY);
 
-    //Abort if the file does not open correctly
+    // Abort if the file does not open correctly
     if(binary_rom == -1){
         printf("Failed opening %s, aborting\n", argv[1]);
         return 1;
     }
-    
-    //Create an array of shorts for opcodes
-    char *opcodes = malloc(sizeof(char) * 290);
 
-    //Read in opcodes
-    read(binary_rom, opcodes, 290);
+    // Read in opcodes to memory beginning at address 0x200
+    read(binary_rom, memory + 0x200, 0x200);
 
-    //Iterate through all opcodes
-    for(int i = 0; i < 290; i+= 2){
+    // Iterate through all opcodes
+    while(1){
         
-        //Print 
-        printf("%x: %02hhx%02hhx  ", i/2, opcodes[i], opcodes[i+1]);
+        // Print
+        printf("%x: %hhx%02hhx  ", i/2, memory[pc + 0x200], memory[pc + 0x201]);
 
-        //Extract opcode command
-        unsigned char command = opcodes[i] >> 4;
+        // Extract opcode command
+        unsigned char command = memory[pc] >> 4;
         command &= 0x0F;
 
-        //Extract possible opcode registers
-        unsigned short reg1 = opcodes[i] & 0x0F;
-        unsigned char reg2 = opcodes[i + 1] >> 4 & 0x0F;
+        // Extract possible opcode registers
+        unsigned char reg1 = memory[pc] & 0x0F;
+        unsigned char reg2 = memory[pc + 1] >> 4;
         
-        //Extract possible opcode specification numbers
-        unsigned char op_num1 = opcodes[i + 1] & 0x0F;
-        unsigned char op_num2 = opcodes[i + 1];
-        unsigned short op_num3 = (opcodes[i + 1] & 0x00FF) | (reg1 << 8);
+        // Extract possible opcode specification numbers
+        unsigned char op_num1 = memory[pc + 1] & 0x0F;
+        unsigned char op_num2 = memory[pc + 1];
+        unsigned short op_num3 = (memory[pc + 1]) | (memory[pc] << 8);
 
-        //Print current line
+        // Print current line
         printf("%x: ", i/2);
 
-        //Decode opcode into command
+        // Decode opcode into command
         switch(command){
 
-            //If the first command is 0
+            // If the first command is 0
             case 0x0:
                 
-                if(op_num2 == 0xE0){
-                    printf("CLEAR_DISPLAY");
-                } else if(op_num2 == 0xEE){
-                    printf("RETURN");
+                // Execute based on NN bits
+                switch(op_num2){
+
+                    // If NN = E0 || IN PROGRESS
+                    case 0xE0:
+
+                        // Clear display
+                        printf("CLEAR_DISPLAY");
+                        clear_display(display);
+                        update_display(display);
+                        break;
+
+                    // If NN = EE || UNSTARTED
+                    case 0xEE:
+
+                        // Return from subroutine
+                        printf("RETURN");
+                        break;
+
                 }
 
-                break;
-
-            //If the first command is 1
+            // If the first command is 1 || IN PROGRESS
             case 0x1:
 
                 printf("GOTO %03x", op_num3);
+                pc = op_num3;
                 break;
 
-            //If the first command is 2
+            // If the first command is 2 || UNSTARTED
             case 0x2:
 
                 printf("CALL %03x", op_num3);
                 break;
 
-            //If the first command is 3
+            //If the first command is 3 || UNSTARTED
             case 0x3:
 
                 printf("SKIP NEXT OP IF V%x == %x", reg1, op_num2);
                 break;
 
-            //If the first command is 4
+            //If the first command is 4 || UNSTARTED
             case 0x4:
 
                 printf("SKIP NEXT OP IF V%x != %x", reg1, op_num2);
                 break;
 
-            //If the first command is 5
+            //If the first command is 5 || UNSTARTED
             case 0x5:
 
                 printf("SKIP NEXT OP IF V%x == V%x", reg1, reg2);
                 break;
 
-            //If the first command is 6
+            //If the first command is 6 || IN PROGRESS
             case 0x6:
 
+                //Set Vx to specified number
                 printf("ASSIGN V%x = %02x", reg1, op_num2);
+                regs[reg1] = op_num2;
                 break;
 
-            //If the first command is 7
+            //If the first command is 7 || IN PROGRESS
             case 0x7:
 
+                //Add specified number to register Vx
                 printf("ASSIGN V%x += %02x", reg1, op_num2);
+                regs[reg1] += op_num2;
                 break;
 
-            //If the first command is 8
+            //If the first command is 8 || UNSTARTED
             case 0x8:
 
-                //Read in second command, print assembly instruction based on this
                 switch(op_num1){
-
                     case 0:
 
                         printf("ASSIGN V%x = V%x", reg1, reg2);
@@ -155,35 +176,38 @@ int main(int argc, char *argv[]){
 
                 break;
 
-            ///If the first command is 9
+            //If the first command is 9 || UNSTARTED
             case 0x9:
 
                 printf("SKIP NEXT OP IF V%x != V%x", reg1, reg2);
                 break;
 
-            //If the first command is 10
-            case 10:
+            //If the first command is A || IN PROGRESS
+            case 0xA:
 
+                //Set index register i to specified digit
                 printf("SET I = %02x", op_num3);
+                i = op_num3;
                 break;
 
-            //If the first command is 11
-            case 11:
+            //If the first command is B || UNSTARTED
+            case 0xB:
                 printf("GO TO V0 + %03x", op_num3);
                 break;
 
-            //If the first command is 12
-            case 12:
+            //If the first command is C || UNSTARTED
+            case 0xC:
                 printf("SET V%x = RANDOM & %02x", reg1, op_num2);
                 break;
 
-            //If the first command is 13
-            case 13:
+            //If the first command is D || UNSTARTED
+            case 0xD:
+
                 printf("DRAW I at (V%x, V%x) with height %x", reg1, reg2, op_num1);
                 break;
 
-            //If the first command is 14
-            case 14:
+            //If the first command is E || UNSTARTED
+            case 0xE:
                 if(op_num2 == 0x9E){
                     printf("SKIP NEXT OP IF V%x is pressed", reg1); 
                 } else if(op_num2 == 0xA1){
@@ -191,15 +215,13 @@ int main(int argc, char *argv[]){
                 }
                 break;
 
-            //If the first command is 15
-            case 15:
+            //If the first command is F || UNSTARTED
+            case 0xF:
                 
-                //Read in second command, print assembly instruction based on this
                 switch(op_num2){
-
                     case 0x07:
 
-                        printf("ASSIGn V%x = delay_timer", reg1);
+                        printf("ASSIGM V%x = delay_timer", reg1);
                         break;
 
                     case 0x0A:
@@ -245,11 +267,17 @@ int main(int argc, char *argv[]){
 
                 break;
         }
-
-        //Print newline, move to next instruction
-        printf("\n");
         
     }
-    
+    pc++
+
     return 0;
+}
+
+void clear_display(char *display){
+
+}
+
+void update_display(char *display){
+
 }
