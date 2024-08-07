@@ -7,22 +7,18 @@
 int load(char *memory, char *filename){
 
     // Open the given file, return -1 if it fails.
-
     int rom = open(argv[1], O_RDONLY);
-
 
     if(rom == -1){
         printf("Failed opening %s, aborting\n", argv[1]);
         return 1;
     }
 
-    //Counter to keep track of memory location
-    int address = 0;
 
-    //Increment memory to program location
+    int address = 0;
     memory += 0x200;
 
-    //Iterate through the ROM and read into memory.
+
     //Opcodes must be converted from big to little endian
     while(1){
         int read = read(rom, memory + address + 1, 1);

@@ -31,20 +31,13 @@ int init_sdl(){
         SDL_RENDERER_ACCELERATED);
 }
 
-int update_graphics(char *sprite){
+int clear_display
 
-}
+int update_display(char *sprite){
 
-//Destroy graphics
-int destroy_graphics(){
-    
 }
 
 // Quit
 int quit(){
-
-}
-
-void clear_display(){
 
 }
