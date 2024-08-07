@@ -1,0 +1,145 @@
+Line 0: 00e0  CLEAR_DISPLAY
+Line 1: a22a  SET I = 22a
+Line 2: 600c  ASSIGN V0 = 0c
+Line 3: 6108  ASSIGN V1 = 08
+Line 4: d01f  DRAW I at (V0, V1) with height f
+Line 5: 7009  ASSIGN V0 += 09
+Line 6: a239  SET I = 239
+Line 7: d01f  DRAW I at (V0, V1) with height f
+Line 8: a248  SET I = 248
+Line 9: 7008  ASSIGN V0 += 08
+Line 10: d01f  DRAW I at (V0, V1) with height f
+Line 11: 7004  ASSIGN V0 += 04
+Line 12: a257  SET I = 257
+Line 13: d01f  DRAW I at (V0, V1) with height f
+Line 14: 7008  ASSIGN V0 += 08
+Line 15: a266  SET I = 266
+Line 16: d01f  DRAW I at (V0, V1) with height f
+Line 17: 7008  ASSIGN V0 += 08
+Line 18: a275  SET I = 275
+Line 19: d01f  DRAW I at (V0, V1) with height f
+Line 20: 1228  GOTO 228
+Line 21: ff00  
+Line 22: ff00  
+Line 23: 3c00  SKIP NEXT OP IF Vc == 0
+Line 24: 3c00  SKIP NEXT OP IF Vc == 0
+Line 25: 3c00  SKIP NEXT OP IF Vc == 0
+Line 26: 3c00  SKIP NEXT OP IF Vc == 0
+Line 27: ff00  
+Line 28: ffff  
+Line 29: 00ff  
+Line 30: 0038  
+Line 31: 003f  
+Line 32: 003f  
+Line 33: 0038  
+Line 34: 00ff  
+Line 35: 00ff  
+Line 36: 8000  ASSIGN V0 = V0
+Line 37: e000  
+Line 38: e000  
+Line 39: 8000  ASSIGN V0 = V0
+Line 40: 8000  ASSIGN V0 = V0
+Line 41: e000  
+Line 42: e000  
+Line 43: 80f8  
+Line 44: 00fc  
+Line 45: 003e  
+Line 46: 003f  
+Line 47: 003b  
+Line 48: 0039  
+Line 49: 00f8  
+Line 50: 00f8  
+Line 51: 0300  
+Line 52: 0700  
+Line 53: 0f00  
+Line 54: bf00  GO TO V0 + f00
+Line 55: fb00  
+Line 56: f300  
+Line 57: e300  
+Line 58: 43e0  SKIP NEXT OP IF V3 != e0
+Line 59: 00e0  CLEAR_DISPLAY
+Line 60: 0080  
+Line 61: 0080  
+Line 62: 0080  
+Line 63: 0080  
+Line 64: 00e0  CLEAR_DISPLAY
+Line 65: 00e0  CLEAR_DISPLAY
+Line 66: 0000  
+Line 67: 0000  
+Line 68: 0000  
+Line 69: 0000  
+Line 70: 0000  
+Line 71: 0000  
+Line 72: 0000  
+Line 73: 0000  
+Line 74: 0000  
+Line 75: 0000  
+Line 76: 0000  
+Line 77: 0000  
+Line 78: 0000  
+Line 79: 0000  
+Line 80: 0000  
+Line 81: 0000  
+Line 82: 0000  
+Line 83: 0000  
+Line 84: 0000  
+Line 85: 0000  
+Line 86: 0000  
+Line 87: 0000  
+Line 88: 0000  
+Line 89: 0000  
+Line 90: 0000  
+Line 91: 0000  
+Line 92: 0000  
+Line 93: 0000  
+Line 94: 0000  
+Line 95: 0000  
+Line 96: 0000  
+Line 97: 0000  
+Line 98: 0000  
+Line 99: 0000  
+Line 100: 0000  
+Line 101: 0000  
+Line 102: 0000  
+Line 103: 0000  
+Line 104: 0000  
+Line 105: 0000  
+Line 106: 0000  
+Line 107: 0000  
+Line 108: 0000  
+Line 109: 0000  
+Line 110: 0000  
+Line 111: 0000  
+Line 112: 0000  
+Line 113: 0000  
+Line 114: 0000  
+Line 115: 0000  
+Line 116: 0000  
+Line 117: 0000  
+Line 118: 0000  
+Line 119: 0000  
+Line 120: 0000  
+Line 121: 0000  
+Line 122: 0000  
+Line 123: 0000  
+Line 124: 0000  
+Line 125: 0000  
+Line 126: 0000  
+Line 127: 0000  
+Line 128: 0000  
+Line 129: 0000  
+Line 130: 0000  
+Line 131: 0000  
+Line 132: 0000  
+Line 133: 0000  
+Line 134: 0000  
+Line 135: 0000  
+Line 136: 0000  
+Line 137: 0000  
+Line 138: 0000  
+Line 139: 0000  
+Line 140: 0000  
+Line 141: 0000  
+Line 142: 0000  
+Line 143: 0000  
+Line 144: 0000  
