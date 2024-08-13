@@ -71,7 +71,6 @@ int main(int args, char* argv[]){
         return -1;
     }
 
-
     // NOTE: In the opcode assembly notation, the first hex number represents the class of command.
     // If the command includes one or two registers, the sequentially first one is represented as
     // X and the second is represented as Y. The final 1, 2, and 3 hex numbers in the opcode are to be stored as
@@ -325,6 +324,7 @@ int main(int args, char* argv[]){
 
         //Print newline, move to next instruction
         pc+= 2;
+        SDL_Delay(16);
 
     }
 

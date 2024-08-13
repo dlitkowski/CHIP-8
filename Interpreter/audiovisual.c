@@ -9,9 +9,9 @@ SDL_Window* window;
 int init_sdl(){
 
     // Attempt to initialize needed SDL subsystems, return -1 on failure
-    int sdl_init = SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER);
+    int init = SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER);
 
-    if (sdl_init != 0) {
+    if (init != 0) {
         printf("SDL_Init Error: %s\n", SDL_GetError());
         return -1;
     }
@@ -19,7 +19,7 @@ int init_sdl(){
     // Attempt to create a 128x64 a fullscreen SDL window
     window = SDL_CreateWindow("CHIP-8",
                     SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-                    128, 64, SDL_WINDOW_RESIZABLE);
+                    1280, 640, 0);
 
     if (window == NULL) {
         printf("SDL_WindowCreate Error: %s\n", SDL_GetError());
@@ -28,7 +28,7 @@ int init_sdl(){
     }
 
     // Create an SDL Renderer for the created window, abort on failure.
-    renderer = SDL_CreateRenderer(window, -1, 0);
+    renderer = SDL_CreateRenderer(window, 1, 0);
 
     if (renderer == NULL) {
         printf("SDL_CreateRenderer Error: %s\n", SDL_GetError());
@@ -36,35 +36,54 @@ int init_sdl(){
         return -1;
     }
 
+    SDL_RenderSetLogicalSize(renderer, 64, 32);
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 
     // Render a startup animation on the SDL window
-    for(int i = 0; i < 128; i++){
-        for(int j = 0; j < 64; j++){
-            SDL_Delay(1);
-            SDL_RenderDrawPoint(renderer, i, j);
-            SDL_RenderPresent(renderer);
-        }
+    for(int i = 0; i < 32; i++){
+        SDL_Delay(32);
+        SDL_RenderDrawLine(renderer, 0, i, 64, i);
+        SDL_RenderPresent(renderer);
     }
+
+    SDL_Delay(1000);
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+    SDL_RenderClear(renderer);
+    SDL_RenderPresent(renderer);
 
     return 0;
 }
 
-// TODO: Clear the display, setting all pixels to 0
+// Clear the display, setting all pixels to 0
 int clear_display(){
-    printf("CLEAR DISPLAY\n");
+
+    printf("Clear Display\n");
+
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+    SDL_RenderClear(renderer);
+    SDL_RenderPresent(renderer);
     return 0;
 }
 
 // TODO: Draw the given sprite of the given height at the given location
 int draw_sprite(char* sprite, int height, int x, int y){
 
-    printf("Draw sprite:\n");
+    printf("Draw sprite of height %d at (%d, %d)\n", height, x, y);
 
-    // Print the sprite using 1s and 0s.
-    for (int i = 0; i < height; i++){
-        printf("Location (%d, %d): %hhb\n", x, y + 1, *(sprite + i));
+    // Set the SDL renderer color to white, then draw the sprite to
+    // the renderer using bit shifting.
+
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+
+    for(int i = 0; i < height; i++){
+        for(int j = 0; j < 8; j++){
+            if ((*(sprite + i) >> j) & 0b1) {
+                SDL_RenderDrawPoint(renderer, x + 8 - j, y + i);
+            }
+        }
     }
+
+    SDL_RenderPresent(renderer);
 
     return 0;
 }
