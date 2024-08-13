@@ -3,5 +3,5 @@
 
 int init_sdl();
 int clear_display();
-int draw_sprite(char* sprite);
+int draw_sprite(char* sprite, char height, char x, char y);
 int quit_sdl();
