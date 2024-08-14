@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 int main(int argc, char *argv[]){
 
@@ -23,7 +24,7 @@ int main(int argc, char *argv[]){
     for(int i = 0; i < 290; i+= 2){
         
         // Print
-        printf("Line %i: %02hhx%02hhx  ", i/2 , opcodes[i], opcodes[i+1]);
+        printf("Address %x: %02hhx%02hhx  ", i + 512 , opcodes[i], opcodes[i+1]);
 
         // Extract opcode command
         unsigned char command = opcodes[i] >> 4;

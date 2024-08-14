@@ -1,0 +1,145 @@
+Address 200: 22f6  CALL 2f6
+Address 202: 6b0c  ASSIGN Vb = 0c
+Address 204: 6c3f  ASSIGN Vc = 3f
+Address 206: 6d0c  ASSIGN Vd = 0c
+Address 208: a2ea  SET I = 2ea
+Address 20a: dab6  DRAW I at (Va, Vb) with height 6
+Address 20c: dcd6  DRAW I at (Vc, Vd) with height 6
+Address 20e: 6e00  ASSIGN Ve = 00
+Address 210: 22d4  CALL 2d4
+Address 212: 6603  ASSIGN V6 = 03
+Address 214: 6802  ASSIGN V8 = 02
+Address 216: 6060  ASSIGN V0 = 60
+Address 218: f015  ASSIGN delay_timer = V0
+Address 21a: f007  ASSIGn V0 = delay_timer
+Address 21c: 3000  SKIP NEXT OP IF V0 == 0
+Address 21e: 121a  GOTO 21a
+Address 220: c717  SET V7 = RANDOM & 17
+Address 222: 7708  ASSIGN V7 += 08
+Address 224: 69ff  ASSIGN V9 = ff
+Address 226: a2f0  SET I = 2f0
+Address 228: d671  DRAW I at (V6, V7) with height 1
+Address 22a: a2ea  SET I = 2ea
+Address 22c: dab6  DRAW I at (Va, Vb) with height 6
+Address 22e: dcd6  DRAW I at (Vc, Vd) with height 6
+Address 230: 6001  ASSIGN V0 = 01
+Address 232: e0a1  SKIP NEXT OP IF V0 is not pressed
+Address 234: 7bfe  ASSIGN Vb += fe
+Address 236: 6004  ASSIGN V0 = 04
+Address 238: e0a1  SKIP NEXT OP IF V0 is not pressed
+Address 23a: 7b02  ASSIGN Vb += 02
+Address 23c: 601f  ASSIGN V0 = 1f
+Address 23e: 8b02  ASSIGN Vb &= V0
+Address 240: dab6  DRAW I at (Va, Vb) with height 6
+Address 242: 600c  ASSIGN V0 = 0c
+Address 244: e0a1  SKIP NEXT OP IF V0 is not pressed
+Address 246: 7dfe  ASSIGN Vd += fe
+Address 248: 600d  ASSIGN V0 = 0d
+Address 24a: e0a1  SKIP NEXT OP IF V0 is not pressed
+Address 24c: 7d02  ASSIGN Vd += 02
+Address 24e: 601f  ASSIGN V0 = 1f
+Address 250: 8d02  ASSIGN Vd &= V0
+Address 252: dcd6  DRAW I at (Vc, Vd) with height 6
+Address 254: a2f0  SET I = 2f0
+Address 256: d671  DRAW I at (V6, V7) with height 1
+Address 258: 8684  ASSIGN V6 += V8, possibly set carry flag
+Address 25a: 8794  ASSIGN V7 += V9, possibly set carry flag
+Address 25c: 603f  ASSIGN V0 = 3f
+Address 25e: 8602  ASSIGN V6 &= V0
+Address 260: 611f  ASSIGN V1 = 1f
+Address 262: 8712  ASSIGN V7 &= V1
+Address 264: 4600  SKIP NEXT OP IF V6 != 0
+Address 266: 1278  GOTO 278
+Address 268: 463f  SKIP NEXT OP IF V6 != 3f
+Address 26a: 1282  GOTO 282
+Address 26c: 471f  SKIP NEXT OP IF V7 != 1f
+Address 26e: 69ff  ASSIGN V9 = ff
+Address 270: 4700  SKIP NEXT OP IF V7 != 0
+Address 272: 6901  ASSIGN V9 = 01
+Address 274: d671  DRAW I at (V6, V7) with height 1
+Address 276: 122a  GOTO 22a
+Address 278: 6802  ASSIGN V8 = 02
+Address 27a: 6301  ASSIGN V3 = 01
+Address 27c: 8070  ASSIGN V0 = V7
+Address 27e: 80b5  ASSIGN V0 -= Vb
+Address 280: 128a  GOTO 28a
+Address 282: 68fe  ASSIGN V8 = fe
+Address 284: 630a  ASSIGN V3 = 0a
+Address 286: 8070  ASSIGN V0 = V7
+Address 288: 80d5  ASSIGN V0 -= Vd
+Address 28a: 3f01  SKIP NEXT OP IF Vf == 1
+Address 28c: 12a2  GOTO 2a2
+Address 28e: 6102  ASSIGN V1 = 02
+Address 290: 8015  ASSIGN V0 -= V1
+Address 292: 3f01  SKIP NEXT OP IF Vf == 1
+Address 294: 12ba  GOTO 2ba
+Address 296: 8015  ASSIGN V0 -= V1
+Address 298: 3f01  SKIP NEXT OP IF Vf == 1
+Address 29a: 12c8  GOTO 2c8
+Address 29c: 8015  ASSIGN V0 -= V1
+Address 29e: 3f01  SKIP NEXT OP IF Vf == 1
+Address 2a0: 12c2  GOTO 2c2
+Address 2a2: 6020  ASSIGN V0 = 20
+Address 2a4: f018  ASSIGN sound_timer = V0
+Address 2a6: 22d4  CALL 2d4
+Address 2a8: 8e34  ASSIGN Ve += V3, possibly set carry flag
+Address 2aa: 22d4  CALL 2d4
+Address 2ac: 663e  ASSIGN V6 = 3e
+Address 2ae: 3301  SKIP NEXT OP IF V3 == 1
+Address 2b0: 6603  ASSIGN V6 = 03
+Address 2b2: 68fe  ASSIGN V8 = fe
+Address 2b4: 3301  SKIP NEXT OP IF V3 == 1
+Address 2b6: 6802  ASSIGN V8 = 02
+Address 2b8: 1216  GOTO 216
+Address 2ba: 79ff  ASSIGN V9 += ff
+Address 2bc: 49fe  SKIP NEXT OP IF V9 != fe
+Address 2be: 69ff  ASSIGN V9 = ff
+Address 2c0: 12c8  GOTO 2c8
+Address 2c2: 7901  ASSIGN V9 += 01
+Address 2c4: 4902  SKIP NEXT OP IF V9 != 2
+Address 2c6: 6901  ASSIGN V9 = 01
+Address 2c8: 6004  ASSIGN V0 = 04
+Address 2ca: f018  ASSIGN sound_timer = V0
+Address 2cc: 7601  ASSIGN V6 += 01
+Address 2ce: 4640  SKIP NEXT OP IF V6 != 40
+Address 2d0: 76fe  ASSIGN V6 += fe
+Address 2d2: 126c  GOTO 26c
+Address 2d4: a2f2  SET I = 2f2
+Address 2d6: fe33  CONVERT Ve to decimal, store in I
+Address 2d8: f265  LOAD memory starting at I into registers V0 to V2
+Address 2da: f129  ASSIGN I = sprite_address(V1)
+Address 2dc: 6414  ASSIGN V4 = 14
+Address 2de: 6500  ASSIGN V5 = 00
+Address 2e0: d455  DRAW I at (V4, V5) with height 5
+Address 2e2: 7415  ASSIGN V4 += 15
+Address 2e4: f229  ASSIGN I = sprite_address(V2)
+Address 2e6: d455  DRAW I at (V4, V5) with height 5
+Address 2e8: 00ee  RETURN
+Address 2ea: 8080  ASSIGN V0 = V8
+Address 2ec: 8080  ASSIGN V0 = V8
+Address 2ee: 8080  ASSIGN V0 = V8
+Address 2f0: 8000  ASSIGN V0 = V0
+Address 2f2: 0000  
+Address 2f4: 0000  
+Address 2f6: 6b20  ASSIGN Vb = 20
+Address 2f8: 6c00  ASSIGN Vc = 00
+Address 2fa: a2ea  SET I = 2ea
+Address 2fc: dbc1  DRAW I at (Vb, Vc) with height 1
+Address 2fe: 7c01  ASSIGN Vc += 01
+Address 300: 3c20  SKIP NEXT OP IF Vc == 20
+Address 302: 12fc  GOTO 2fc
+Address 304: 6a00  ASSIGN Va = 00
+Address 306: 00ee  RETURN
+Address 308: 0000  
+Address 30a: 0000  
+Address 30c: 0000  
+Address 30e: 0000  
+Address 310: 0000  
+Address 312: 0000  
+Address 314: 0000  
+Address 316: 0000  
+Address 318: 0000  
+Address 31a: 0000  
+Address 31c: 0000  
+Address 31e: 0000  
+Address 320: 0000  
