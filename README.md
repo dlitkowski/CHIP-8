@@ -6,5 +6,6 @@ The *Disassembler* directory features a program to dump a CHIP-8 binary ROM into
 Many thanks to Wikipedia for information on CHIP-8, and thanks to @kripod for his database of ROMs. Also thanks to @tobiasvl for his premade fonts (I didn't feel like going through the tedium). 
 
 TODO: 
-Test keyboard functionality. 
+Test keyboard functionality.
+
 Test more ROMs, add threading so the delay and sound timers count down at 60hz and the screen is not unnecessarily updated. 
