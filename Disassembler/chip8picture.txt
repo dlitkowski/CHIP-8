@@ -1,0 +1,145 @@
+Address 200: 00e0  CLEAR_DISPLAY
+Address 202: a248  SET I = 248
+Address 204: 6000  ASSIGN V0 = 00
+Address 206: 611e  ASSIGN V1 = 1e
+Address 208: 6200  ASSIGN V2 = 00
+Address 20a: d202  DRAW I at (V2, V0) with height 2
+Address 20c: d212  DRAW I at (V2, V1) with height 2
+Address 20e: 7208  ASSIGN V2 += 08
+Address 210: 3240  SKIP NEXT OP IF V2 == 40
+Address 212: 120a  GOTO 20a
+Address 214: 6000  ASSIGN V0 = 00
+Address 216: 613e  ASSIGN V1 = 3e
+Address 218: 6202  ASSIGN V2 = 02
+Address 21a: a24a  SET I = 24a
+Address 21c: d02e  DRAW I at (V0, V2) with height e
+Address 21e: d12e  DRAW I at (V1, V2) with height e
+Address 220: 720e  ASSIGN V2 += 0e
+Address 222: d02e  DRAW I at (V0, V2) with height e
+Address 224: d12e  DRAW I at (V1, V2) with height e
+Address 226: a258  SET I = 258
+Address 228: 600b  ASSIGN V0 = 0b
+Address 22a: 6108  ASSIGN V1 = 08
+Address 22c: d01f  DRAW I at (V0, V1) with height f
+Address 22e: 700a  ASSIGN V0 += 0a
+Address 230: a267  SET I = 267
+Address 232: d01f  DRAW I at (V0, V1) with height f
+Address 234: 700a  ASSIGN V0 += 0a
+Address 236: a276  SET I = 276
+Address 238: d01f  DRAW I at (V0, V1) with height f
+Address 23a: 7003  ASSIGN V0 += 03
+Address 23c: a285  SET I = 285
+Address 23e: d01f  DRAW I at (V0, V1) with height f
+Address 240: 700a  ASSIGN V0 += 0a
+Address 242: a294  SET I = 294
+Address 244: d01f  DRAW I at (V0, V1) with height f
+Address 246: 1246  GOTO 246
+Address 248: ffff  
+Address 24a: c0c0  SET V0 = RANDOM & c0
+Address 24c: c0c0  SET V0 = RANDOM & c0
+Address 24e: c0c0  SET V0 = RANDOM & c0
+Address 250: c0c0  SET V0 = RANDOM & c0
+Address 252: c0c0  SET V0 = RANDOM & c0
+Address 254: c0c0  SET V0 = RANDOM & c0
+Address 256: c0c0  SET V0 = RANDOM & c0
+Address 258: ff80  
+Address 25a: 8080  ASSIGN V0 = V8
+Address 25c: 8080  ASSIGN V0 = V8
+Address 25e: 8080  ASSIGN V0 = V8
+Address 260: 8080  ASSIGN V0 = V8
+Address 262: 8080  ASSIGN V0 = V8
+Address 264: 8080  ASSIGN V0 = V8
+Address 266: ff81  
+Address 268: 8181  ASSIGN V1 |= V8
+Address 26a: 8181  ASSIGN V1 |= V8
+Address 26c: 8181  ASSIGN V1 |= V8
+Address 26e: ff81  
+Address 270: 8181  ASSIGN V1 |= V8
+Address 272: 8181  ASSIGN V1 |= V8
+Address 274: 8181  ASSIGN V1 |= V8
+Address 276: 8080  ASSIGN V0 = V8
+Address 278: 8080  ASSIGN V0 = V8
+Address 27a: 8080  ASSIGN V0 = V8
+Address 27c: 8080  ASSIGN V0 = V8
+Address 27e: 8080  ASSIGN V0 = V8
+Address 280: 8080  ASSIGN V0 = V8
+Address 282: 8080  ASSIGN V0 = V8
+Address 284: 80ff  
+Address 286: 8181  ASSIGN V1 |= V8
+Address 288: 8181  ASSIGN V1 |= V8
+Address 28a: 8181  ASSIGN V1 |= V8
+Address 28c: ff80  
+Address 28e: 8080  ASSIGN V0 = V8
+Address 290: 8080  ASSIGN V0 = V8
+Address 292: 8080  ASSIGN V0 = V8
+Address 294: ff81  
+Address 296: 8181  ASSIGN V1 |= V8
+Address 298: 8181  ASSIGN V1 |= V8
+Address 29a: 81ff  
+Address 29c: 8181  ASSIGN V1 |= V8
+Address 29e: 8181  ASSIGN V1 |= V8
+Address 2a0: 8181  ASSIGN V1 |= V8
+Address 2a2: ffff  
+Address 2a4: 0000  
+Address 2a6: 0000  
+Address 2a8: 0000  
+Address 2aa: 0000  
+Address 2ac: 0000  
+Address 2ae: 0000  
+Address 2b0: 0000  
+Address 2b2: 0000  
+Address 2b4: 0000  
+Address 2b6: 0000  
+Address 2b8: 0000  
+Address 2ba: 0000  
+Address 2bc: 0000  
+Address 2be: 0000  
+Address 2c0: 0000  
+Address 2c2: 0000  
+Address 2c4: 0000  
+Address 2c6: 0000  
+Address 2c8: 0000  
+Address 2ca: 0000  
+Address 2cc: 0000  
+Address 2ce: 0000  
+Address 2d0: 0000  
+Address 2d2: 0000  
+Address 2d4: 0000  
+Address 2d6: 0000  
+Address 2d8: 0000  
+Address 2da: 0000  
+Address 2dc: 0000  
+Address 2de: 0000  
+Address 2e0: 0000  
+Address 2e2: 0000  
+Address 2e4: 0000  
+Address 2e6: 0000  
+Address 2e8: 0000  
+Address 2ea: 0000  
+Address 2ec: 0000  
+Address 2ee: 0000  
+Address 2f0: 0000  
+Address 2f2: 0000  
+Address 2f4: 0000  
+Address 2f6: 0000  
+Address 2f8: 0000  
+Address 2fa: 0000  
+Address 2fc: 0000  
+Address 2fe: 0000  
+Address 300: 0000  
+Address 302: 0000  
+Address 304: 0000  
+Address 306: 0000  
+Address 308: 0000  
+Address 30a: 0000  
+Address 30c: 0000  
+Address 30e: 0000  
+Address 310: 0000  
+Address 312: 0000  
+Address 314: 0000  
+Address 316: 0000  
+Address 318: 0000  
+Address 31a: 0000  
+Address 31c: 0000  
+Address 31e: 0000  
+Address 320: 0000  

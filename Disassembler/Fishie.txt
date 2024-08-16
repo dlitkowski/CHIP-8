@@ -1,0 +1,145 @@
+Address 200: 00e0  CLEAR_DISPLAY
+Address 202: a220  SET I = 220
+Address 204: 6208  ASSIGN V2 = 08
+Address 206: 60f8  ASSIGN V0 = f8
+Address 208: 7008  ASSIGN V0 += 08
+Address 20a: 6110  ASSIGN V1 = 10
+Address 20c: 4020  SKIP NEXT OP IF V0 != 20
+Address 20e: 120e  GOTO 20e
+Address 210: d108  DRAW I at (V1, V0) with height 8
+Address 212: f21e  ASSIGN I += V2
+Address 214: 7108  ASSIGN V1 += 08
+Address 216: 4130  SKIP NEXT OP IF V1 != 30
+Address 218: 1208  GOTO 208
+Address 21a: 1210  GOTO 210
+Address 21c: 0000  
+Address 21e: 0000  
+Address 220: 0000  
+Address 222: 0000  
+Address 224: 0018  
+Address 226: 3c3c  SKIP NEXT OP IF Vc == 3c
+Address 228: 0000  
+Address 22a: 0000  
+Address 22c: 0000  
+Address 22e: 0000  
+Address 230: 0000  
+Address 232: 0000  
+Address 234: 0000  
+Address 236: 0000  
+Address 238: 0000  
+Address 23a: 0000  
+Address 23c: 0000  
+Address 23e: 0000  
+Address 240: 3e3f  SKIP NEXT OP IF Ve == 3f
+Address 242: 3f3b  SKIP NEXT OP IF Vf == 3b
+Address 244: 3938  SKIP NEXT OP IF V9 == 38
+Address 246: 3838  SKIP NEXT OP IF V8 == 38
+Address 248: 0000  
+Address 24a: 80c1  ASSIGN V0 |= Vc
+Address 24c: e7ff  
+Address 24e: 7e3c  ASSIGN Ve += 3c
+Address 250: 001f  
+Address 252: fff9  
+Address 254: c080  SET V0 = RANDOM & 80
+Address 256: 0303  
+Address 258: 0080  
+Address 25a: e0f0  
+Address 25c: 7838  ASSIGN V8 += 38
+Address 25e: 1c1c  GOTO c1c
+Address 260: 3838  SKIP NEXT OP IF V8 == 38
+Address 262: 393b  SKIP NEXT OP IF V9 == 3b
+Address 264: 3f3f  SKIP NEXT OP IF Vf == 3f
+Address 266: 3e3c  SKIP NEXT OP IF Ve == 3c
+Address 268: 78fc  ASSIGN V8 += fc
+Address 26a: fecf  
+Address 26c: 8703  ASSIGN V7 ^= V0
+Address 26e: 0100  
+Address 270: 0000  
+Address 272: 0000  
+Address 274: 80e3  ASSIGN V0 ^= Ve
+Address 276: ff7f  
+Address 278: 1c38  GOTO c38
+Address 27a: 3870  SKIP NEXT OP IF V8 == 70
+Address 27c: f0e0  
+Address 27e: c000  SET V0 = RANDOM & 00
+Address 280: 3c18  SKIP NEXT OP IF Vc == 18
+Address 282: 0000  
+Address 284: 0000  
+Address 286: 0000  
+Address 288: 0000  
+Address 28a: 0000  
+Address 28c: 0000  
+Address 28e: 0000  
+Address 290: 0000  
+Address 292: 0000  
+Address 294: 0000  
+Address 296: 0000  
+Address 298: 0000  
+Address 29a: 0000  
+Address 29c: 0000  
+Address 29e: 0000  
+Address 2a0: 0000  
+Address 2a2: 0000  
+Address 2a4: 0000  
+Address 2a6: 0000  
+Address 2a8: 0000  
+Address 2aa: 0000  
+Address 2ac: 0000  
+Address 2ae: 0000  
+Address 2b0: 0000  
+Address 2b2: 0000  
+Address 2b4: 0000  
+Address 2b6: 0000  
+Address 2b8: 0000  
+Address 2ba: 0000  
+Address 2bc: 0000  
+Address 2be: 0000  
+Address 2c0: 0000  
+Address 2c2: 0000  
+Address 2c4: 0000  
+Address 2c6: 0000  
+Address 2c8: 0000  
+Address 2ca: 0000  
+Address 2cc: 0000  
+Address 2ce: 0000  
+Address 2d0: 0000  
+Address 2d2: 0000  
+Address 2d4: 0000  
+Address 2d6: 0000  
+Address 2d8: 0000  
+Address 2da: 0000  
+Address 2dc: 0000  
+Address 2de: 0000  
+Address 2e0: 0000  
+Address 2e2: 0000  
+Address 2e4: 0000  
+Address 2e6: 0000  
+Address 2e8: 0000  
+Address 2ea: 0000  
+Address 2ec: 0000  
+Address 2ee: 0000  
+Address 2f0: 0000  
+Address 2f2: 0000  
+Address 2f4: 0000  
+Address 2f6: 0000  
+Address 2f8: 0000  
+Address 2fa: 0000  
+Address 2fc: 0000  
+Address 2fe: 0000  
+Address 300: 0000  
+Address 302: 0000  
+Address 304: 0000  
+Address 306: 0000  
+Address 308: 0000  
+Address 30a: 0000  
+Address 30c: 0000  
+Address 30e: 0000  
+Address 310: 0000  
+Address 312: 0000  
+Address 314: 0000  
+Address 316: 0000  
+Address 318: 0000  
+Address 31a: 0000  
+Address 31c: 0000  
+Address 31e: 0000  
+Address 320: 0000  

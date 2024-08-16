@@ -7,6 +7,8 @@
 
 #include <SDL2/SDL.h>
 
+
+
 // Simple function to get the font sprite's location in memory
 // for all hex digits. Returns 80 on failure, which will be a
 // blank sprite.
@@ -15,23 +17,25 @@ int font_get(char number){
         switch(number) {
             case 0: return 0;
             case 1: return 5;
-            case 2: return 15;
-            case 3: return 20;
-            case 4: return 25;
-            case 5: return 30;
-            case 6: return 35;
-            case 7: return 40;
-            case 8: return 45;
-            case 9: return 50;
-            case 0xA: return 55;
-            case 0xB: return 60;
-            case 0xC: return 65;
-            case 0xD: return 70;
-            case 0xE: return 75;
+            case 2: return 10;
+            case 3: return 15;
+            case 4: return 20;
+            case 5: return 25;
+            case 6: return 30;
+            case 7: return 35;
+            case 8: return 40;
+            case 9: return 45;
+            case 0xA: return 50;
+            case 0xB: return 55;
+            case 0xC: return 60;
+            case 0xD: return 65;
+            case 0xE: return 70;
+            case 0xF: return 75;
         }
 
         return 80;
 }
+
 
 
 // Function to load a ROM into the given memory chunk.
@@ -100,7 +104,7 @@ int main(int args, char* argv[]){
                     0xF0, 0x80, 0xF0, 0x80, 0xF0, // E
                     0xF0, 0x80, 0xF0, 0x80, 0x80}; // F
 
-    for(int i = 0; i < 30; i++){
+    for(int i = 0; i < 80; i++){
         memory[i] = fonts[i];
     }
 
@@ -120,6 +124,9 @@ int main(int args, char* argv[]){
         quit_sdl();
         return -1;
     }
+
+    // Pass the current time as a seed for random functionality
+    srand(time(NULL));
 
     // NOTE: In the opcode assembly notation, the first hex number represents the class of command.
     // If the command includes one or two registers, the sequentially first one is represented as
@@ -259,27 +266,26 @@ int main(int args, char* argv[]){
                     // ADD reg_Y to reg_X, set carry flag in the case of an overflow
                     case 4:
 
-                        registers[reg_X] += registers[reg_Y];
-
                         if (registers[reg_X] < registers[reg_Y] + registers[reg_X]){
                             registers[0xF] = 1;
                         } else {
                             registers[0xF] = 0;
                         }
 
+                        registers[reg_X] += registers[reg_Y];
+
                         break;
 
                     // SUBTRACT reg_Y from reg_X, set carry flag in the case of an underflow
                     case 5:
 
-                        registers[reg_X] -= registers[reg_Y];
-
                         if (registers[reg_X] < registers[reg_Y]){
-                            registers[0xF] = 1;
-                        } else {
                             registers[0xF] = 0;
+                        } else {
+                            registers[0xF] = 1;
                         }
 
+                        registers[reg_X] -= registers[reg_Y];
                         break;
 
                     // SHIFT reg_X right one bit, store the shifted bit in reg_F
@@ -324,7 +330,7 @@ int main(int args, char* argv[]){
             case 0xB:
 
                 // Set pc to the previous instruction from the desired one
-                pc = registers[0] + op_xNNN;
+                pc = registers[0] + op_xNNN - 2;
                 break;
 
             // SET reg_X to a random char & xxNN
@@ -343,7 +349,15 @@ int main(int args, char* argv[]){
                     return 1;
                 }
 
-                draw_sprite(memory + pointer, op_xxxN, registers[reg_X], registers[reg_Y]);
+                int flipped = draw_sprite(memory + pointer, op_xxxN, registers[reg_X], registers[reg_Y]);
+
+                // If the sprite flipped a preset pixel, set reg_F to 1
+                if(flipped) {
+                    registers[0xF] = 1;
+                } else {
+                    registers[0xF] = 0;
+                }
+
                 break;
 
             // SKIP the next operation based on if reg_X is pressed or not pressed, depending
@@ -385,7 +399,8 @@ int main(int args, char* argv[]){
                     // ASSIGN reg_X to the next key pressed
                     case 0x0A:
 
-                        printf("ASSIGN V%x = get_key", reg_X);
+                        char keypressed = key_wait();
+                        registers[reg_X] = keypressed;
                         break;
 
                     // ASSIGN delay timer to reg_X
@@ -401,10 +416,10 @@ int main(int args, char* argv[]){
                         sound_timer = registers[reg_X];
                         break;
 
-                    // ASSIGN pointer to reg_X
+                    // ASSIGN pointer += reg_X
                     case 0x1E:
 
-                        pointer = registers[reg_X];
+                        pointer += registers[reg_X];
                         break;
 
                     // ASSIGN pointer to the font location of reg_X's char
@@ -448,13 +463,23 @@ int main(int args, char* argv[]){
 
         //Print newline, move to next instruction
         pc+= 2;
-        SDL_Delay(16);
-        delay_timer--;
-        sound_timer--;
+        SDL_Delay(1);
+
+        // Decrement delay and sound timers
+        // NOTE: these will be moved to a 60hz thread eventually
+        if(delay_timer > 0){
+            delay_timer--;
+        }
+
+        if(sound_timer > 0){
+            sound_timer--;
+        }
+
         update_display();
 
     }
 
     quit_sdl();
+    free(memory);
     return 0;
 }

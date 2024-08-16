@@ -1,0 +1,145 @@
+Address 200: 00e0  CLEAR_DISPLAY
+Address 202: c0ff  SET V0 = RANDOM & ff
+Address 204: a224  SET I = 224
+Address 206: f033  CONVERT V0 to decimal, store in I
+Address 208: f265  LOAD memory starting at I into registers V0 to V2
+Address 20a: f029  ASSIGN I = sprite_address(V0)
+Address 20c: 6000  ASSIGN V0 = 00
+Address 20e: 6300  ASSIGN V3 = 00
+Address 210: d035  DRAW I at (V0, V3) with height 5
+Address 212: f129  ASSIGN I = sprite_address(V1)
+Address 214: 6005  ASSIGN V0 = 05
+Address 216: d035  DRAW I at (V0, V3) with height 5
+Address 218: f229  ASSIGN I = sprite_address(V2)
+Address 21a: 600a  ASSIGN V0 = 0a
+Address 21c: d035  DRAW I at (V0, V3) with height 5
+Address 21e: f00a  ASSIGN V0 = get_key
+Address 220: 1200  GOTO 200
+Address 222: 0000  
+Address 224: 0000  
+Address 226: 0000  
+Address 228: 0000  
+Address 22a: 0000  
+Address 22c: 0000  
+Address 22e: 0000  
+Address 230: 0000  
+Address 232: 0000  
+Address 234: 0000  
+Address 236: 0000  
+Address 238: 0000  
+Address 23a: 0000  
+Address 23c: 0000  
+Address 23e: 0000  
+Address 240: 0000  
+Address 242: 0000  
+Address 244: 0000  
+Address 246: 0000  
+Address 248: 0000  
+Address 24a: 0000  
+Address 24c: 0000  
+Address 24e: 0000  
+Address 250: 0000  
+Address 252: 0000  
+Address 254: 0000  
+Address 256: 0000  
+Address 258: 0000  
+Address 25a: 0000  
+Address 25c: 0000  
+Address 25e: 0000  
+Address 260: 0000  
+Address 262: 0000  
+Address 264: 0000  
+Address 266: 0000  
+Address 268: 0000  
+Address 26a: 0000  
+Address 26c: 0000  
+Address 26e: 0000  
+Address 270: 0000  
+Address 272: 0000  
+Address 274: 0000  
+Address 276: 0000  
+Address 278: 0000  
+Address 27a: 0000  
+Address 27c: 0000  
+Address 27e: 0000  
+Address 280: 0000  
+Address 282: 0000  
+Address 284: 0000  
+Address 286: 0000  
+Address 288: 0000  
+Address 28a: 0000  
+Address 28c: 0000  
+Address 28e: 0000  
+Address 290: 0000  
+Address 292: 0000  
+Address 294: 0000  
+Address 296: 0000  
+Address 298: 0000  
+Address 29a: 0000  
+Address 29c: 0000  
+Address 29e: 0000  
+Address 2a0: 0000  
+Address 2a2: 0000  
+Address 2a4: 0000  
+Address 2a6: 0000  
+Address 2a8: 0000  
+Address 2aa: 0000  
+Address 2ac: 0000  
+Address 2ae: 0000  
+Address 2b0: 0000  
+Address 2b2: 0000  
+Address 2b4: 0000  
+Address 2b6: 0000  
+Address 2b8: 0000  
+Address 2ba: 0000  
+Address 2bc: 0000  
+Address 2be: 0000  
+Address 2c0: 0000  
+Address 2c2: 0000  
+Address 2c4: 0000  
+Address 2c6: 0000  
+Address 2c8: 0000  
+Address 2ca: 0000  
+Address 2cc: 0000  
+Address 2ce: 0000  
+Address 2d0: 0000  
+Address 2d2: 0000  
+Address 2d4: 0000  
+Address 2d6: 0000  
+Address 2d8: 0000  
+Address 2da: 0000  
+Address 2dc: 0000  
+Address 2de: 0000  
+Address 2e0: 0000  
+Address 2e2: 0000  
+Address 2e4: 0000  
+Address 2e6: 0000  
+Address 2e8: 0000  
+Address 2ea: 0000  
+Address 2ec: 0000  
+Address 2ee: 0000  
+Address 2f0: 0000  
+Address 2f2: 0000  
+Address 2f4: 0000  
+Address 2f6: 0000  
+Address 2f8: 0000  
+Address 2fa: 0000  
+Address 2fc: 0000  
+Address 2fe: 0000  
+Address 300: 0000  
+Address 302: 0000  
+Address 304: 0000  
+Address 306: 0000  
+Address 308: 0000  
+Address 30a: 0000  
+Address 30c: 0000  
+Address 30e: 0000  
+Address 310: 0000  
+Address 312: 0000  
+Address 314: 0000  
+Address 316: 0000  
+Address 318: 0000  
+Address 31a: 0000  
+Address 31c: 0000  
+Address 31e: 0000  
+Address 320: 0000  

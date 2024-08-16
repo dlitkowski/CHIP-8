@@ -1,0 +1,1793 @@
+Address 200: 2d46  CALL d46
+Address 202: 9010  SKIP NEXT OP IF V0 != V1
+Address 204: 151d  GOTO 51d
+Address 206: 1ed0  GOTO ed0
+Address 208: 5b62  SKIP NEXT OP IF Vb == V6
+Address 20a: 7920  ASSIGN V9 += 20
+Address 20c: 6861  ASSIGN V8 = 61
+Address 20e: 705d  ASSIGN V0 += 5d
+Address 210: 9a00  SKIP NEXT OP IF Va != V0
+Address 212: 8800  ASSIGN V8 = V0
+Address 214: 8435  ASSIGN V4 -= V3
+Address 216: 8800  ASSIGN V8 = V0
+Address 218: 886a  
+Address 21a: 8027  ASSIGN V0 = V2 - V0
+Address 21c: 8435  ASSIGN V4 -= V3
+Address 21e: 8027  ASSIGN V0 = V2 - V0
+Address 220: 886a  
+Address 222: 8419  
+Address 224: 22ea  CALL 2ea
+Address 226: 127a  GOTO 27a
+Address 228: 22bc  CALL 2bc
+Address 22a: 2346  CALL 346
+Address 22c: 1238  GOTO 238
+Address 22e: 2316  CALL 316
+Address 230: 22bc  CALL 2bc
+Address 232: 127a  GOTO 27a
+Address 234: 22ea  CALL 2ea
+Address 236: 2346  CALL 346
+Address 238: 3bff  SKIP NEXT OP IF Vb == ff
+Address 23a: 127a  GOTO 27a
+Address 23c: 6600  ASSIGN V6 = 00
+Address 23e: 6507  ASSIGN V5 = 07
+Address 240: 2663  CALL 663
+Address 242: 3e0a  SKIP NEXT OP IF Ve == a
+Address 244: 169b  GOTO 69b
+Address 246: 00e0  CLEAR_DISPLAY
+Address 248: 686e  ASSIGN V8 = 6e
+Address 24a: 2dbc  CALL dbc
+Address 24c: a7eb  SET I = 7eb
+Address 24e: f265  LOAD memory starting at I into registers V0 to V2
+Address 250: 4105  SKIP NEXT OP IF V1 != 5
+Address 252: 1274  GOTO 274
+Address 254: a802  SET I = 802
+Address 256: f11e  ASSIGN I += V1
+Address 258: f065  LOAD memory starting at I into registers V0 to V0
+Address 25a: 4003  SKIP NEXT OP IF V0 != 3
+Address 25c: 1274  GOTO 274
+Address 25e: 72f6  ASSIGN V2 += f6
+Address 260: 5020  SKIP NEXT OP IF V0 == V2
+Address 262: 1274  GOTO 274
+Address 264: 7001  ASSIGN V0 += 01
+Address 266: a802  SET I = 802
+Address 268: f11e  ASSIGN I += V1
+Address 26a: f055  DUMP registers from V0 to V0 starting at I
+Address 26c: 2dbc  CALL dbc
+Address 26e: 2d46  CALL d46
+Address 270: 5010  SKIP NEXT OP IF V0 == V1
+Address 272: 2ede  CALL ede
+Address 274: 1551  GOTO 551
+Address 276: 22ea  CALL 2ea
+Address 278: 2316  CALL 316
+Address 27a: a7fe  SET I = 7fe
+Address 27c: dbc5  DRAW I at (Vb, Vc) with height 5
+Address 27e: a7f0  SET I = 7f0
+Address 280: f665  LOAD memory starting at I into registers V0 to V6
+Address 282: e5a1  SKIP NEXT OP IF V5 is not pressed
+Address 284: 13dc  GOTO 3dc
+Address 286: e2a1  SKIP NEXT OP IF V2 is not pressed
+Address 288: 7001  ASSIGN V0 += 01
+Address 28a: e1a1  SKIP NEXT OP IF V1 is not pressed
+Address 28c: 7002  ASSIGN V0 += 02
+Address 28e: e3a1  SKIP NEXT OP IF V3 is not pressed
+Address 290: 7004  ASSIGN V0 += 04
+Address 292: e6a1  SKIP NEXT OP IF V6 is not pressed
+Address 294: 7008  ASSIGN V0 += 08
+Address 296: 4000  SKIP NEXT OP IF V0 != 0
+Address 298: 12b8  GOTO 2b8
+Address 29a: fa07  ASSIGn Va = delay_timer
+Address 29c: 3a00  SKIP NEXT OP IF Va == 0
+Address 29e: 127e  GOTO 27e
+Address 2a0: f415  ASSIGN delay_timer = V4
+Address 2a2: e4a1  SKIP NEXT OP IF V4 is not pressed
+Address 2a4: 6502  ASSIGN V5 = 02
+Address 2a6: a7fe  SET I = 7fe
+Address 2a8: dbc5  DRAW I at (Vb, Vc) with height 5
+Address 2aa: 85f1  ASSIGN V5 |= Vf
+Address 2ac: a40b  SET I = 40b
+Address 2ae: f01e  ASSIGN I += V0
+Address 2b0: f065  LOAD memory starting at I into registers V0 to V0
+Address 2b2: a2b7  SET I = 2b7
+Address 2b4: f055  DUMP registers from V0 to V0 starting at I
+Address 2b6: 1230  GOTO 230
+Address 2b8: f015  ASSIGN delay_timer = V0
+Address 2ba: 127e  GOTO 27e
+Address 2bc: 4b23  SKIP NEXT OP IF Vb != 23
+Address 2be: 00ee  RETURN
+Address 2c0: 4c01  SKIP NEXT OP IF Vc != 1
+Address 2c2: 00ee  RETURN
+Address 2c4: 3503  SKIP NEXT OP IF V5 == 3
+Address 2c6: 12e6  GOTO 2e6
+Address 2c8: 2485  CALL 485
+Address 2ca: 9a90  SKIP NEXT OP IF Va != V9
+Address 2cc: 00ee  RETURN
+Address 2ce: 80a0  ASSIGN V0 = Va
+Address 2d0: 70ff  ASSIGN V0 += ff
+Address 2d2: a816  SET I = 816
+Address 2d4: db01  DRAW I at (Vb, V0) with height 1
+Address 2d6: db01  DRAW I at (Vb, V0) with height 1
+Address 2d8: 4f01  SKIP NEXT OP IF Vf != 1
+Address 2da: 00ee  RETURN
+Address 2dc: 89b0  ASSIGN V9 = Vb
+Address 2de: 2763  CALL 763
+Address 2e0: 7afb  ASSIGN Va += fb
+Address 2e2: 2763  CALL 763
+Address 2e4: 2429  CALL 429
+Address 2e6: 7cfb  ASSIGN Vc += fb
+Address 2e8: 00ee  RETURN
+Address 2ea: 4b23  SKIP NEXT OP IF Vb != 23
+Address 2ec: 00ee  RETURN
+Address 2ee: 4c1a  SKIP NEXT OP IF Vc != 1a
+Address 2f0: 00ee  RETURN
+Address 2f2: 3503  SKIP NEXT OP IF V5 == 3
+Address 2f4: 1312  GOTO 312
+Address 2f6: 2485  CALL 485
+Address 2f8: 9a90  SKIP NEXT OP IF Va != V9
+Address 2fa: 00ee  RETURN
+Address 2fc: 7905  ASSIGN V9 += 05
+Address 2fe: a816  SET I = 816
+Address 300: db91  DRAW I at (Vb, V9) with height 1
+Address 302: db91  DRAW I at (Vb, V9) with height 1
+Address 304: 4f01  SKIP NEXT OP IF Vf != 1
+Address 306: 00ee  RETURN
+Address 308: 89b0  ASSIGN V9 = Vb
+Address 30a: 2763  CALL 763
+Address 30c: 7a05  ASSIGN Va += 05
+Address 30e: 2763  CALL 763
+Address 310: 2429  CALL 429
+Address 312: 7c05  ASSIGN Vc += 05
+Address 314: 00ee  RETURN
+Address 316: 4b05  SKIP NEXT OP IF Vb != 5
+Address 318: 00ee  RETURN
+Address 31a: 3503  SKIP NEXT OP IF V5 == 3
+Address 31c: 133c  GOTO 33c
+Address 31e: 24c9  CALL 4c9
+Address 320: 9960  SKIP NEXT OP IF V9 != V6
+Address 322: 00ee  RETURN
+Address 324: 8090  ASSIGN V0 = V9
+Address 326: 70ff  ASSIGN V0 += ff
+Address 328: a817  SET I = 817
+Address 32a: d0c3  DRAW I at (V0, Vc) with height 3
+Address 32c: d0c3  DRAW I at (V0, Vc) with height 3
+Address 32e: 4f01  SKIP NEXT OP IF Vf != 1
+Address 330: 00ee  RETURN
+Address 332: 8ac0  ASSIGN Va = Vc
+Address 334: 2763  CALL 763
+Address 336: 79f3  ASSIGN V9 += f3
+Address 338: 2763  CALL 763
+Address 33a: 2429  CALL 429
+Address 33c: 7bfb  ASSIGN Vb += fb
+Address 33e: 00ee  RETURN
+Address 340: 4c0b  SKIP NEXT OP IF Vc != b
+Address 342: 134e  GOTO 34e
+Address 344: 00ee  RETURN
+Address 346: 4b1e  SKIP NEXT OP IF Vb != 1e
+Address 348: 1340  GOTO 340
+Address 34a: 4b23  SKIP NEXT OP IF Vb != 23
+Address 34c: 00ee  RETURN
+Address 34e: 3503  SKIP NEXT OP IF V5 == 3
+Address 350: 1372  GOTO 372
+Address 352: 24c9  CALL 4c9
+Address 354: 9960  SKIP NEXT OP IF V9 != V6
+Address 356: 00ee  RETURN
+Address 358: 7605  ASSIGN V6 += 05
+Address 35a: a817  SET I = 817
+Address 35c: d6c3  DRAW I at (V6, Vc) with height 3
+Address 35e: d6c3  DRAW I at (V6, Vc) with height 3
+Address 360: 4f01  SKIP NEXT OP IF Vf != 1
+Address 362: 00ee  RETURN
+Address 364: 8ac0  ASSIGN Va = Vc
+Address 366: 2763  CALL 763
+Address 368: 79fd  ASSIGN V9 += fd
+Address 36a: 2763  CALL 763
+Address 36c: 2429  CALL 429
+Address 36e: 4623  SKIP NEXT OP IF V6 != 23
+Address 370: 1376  GOTO 376
+Address 372: 7b05  ASSIGN Vb += 05
+Address 374: 00ee  RETURN
+Address 376: 7b05  ASSIGN Vb += 05
+Address 378: 86b0  ASSIGN V6 = Vb
+Address 37a: 8b90  ASSIGN Vb = V9
+Address 37c: 7bf3  ASSIGN Vb += f3
+Address 37e: a816  SET I = 816
+Address 380: dbc1  DRAW I at (Vb, Vc) with height 1
+Address 382: dbc1  DRAW I at (Vb, Vc) with height 1
+Address 384: 4f00  SKIP NEXT OP IF Vf != 0
+Address 386: 1392  GOTO 392
+Address 388: a812  SET I = 812
+Address 38a: dbc5  DRAW I at (Vb, Vc) with height 5
+Address 38c: dbc5  DRAW I at (Vb, Vc) with height 5
+Address 38e: 4f01  SKIP NEXT OP IF Vf != 1
+Address 390: 13b0  GOTO 3b0
+Address 392: 4b05  SKIP NEXT OP IF Vb != 5
+Address 394: 139a  GOTO 39a
+Address 396: 7bfb  ASSIGN Vb += fb
+Address 398: 137e  GOTO 37e
+Address 39a: 8b80  ASSIGN Vb = V8
+Address 39c: 2d54  CALL d54
+Address 39e: 6809  ASSIGN V8 = 09
+Address 3a0: 3700  SKIP NEXT OP IF V7 == 0
+Address 3a2: 6816  ASSIGN V8 = 16
+Address 3a4: 4701  SKIP NEXT OP IF V7 != 1
+Address 3a6: 6810  ASSIGN V8 = 10
+Address 3a8: 2dbc  CALL dbc
+Address 3aa: 6a0b  ASSIGN Va = 0b
+Address 3ac: 88b0  ASSIGN V8 = Vb
+Address 3ae: 66ff  ASSIGN V6 = ff
+Address 3b0: 6300  ASSIGN V3 = 00
+Address 3b2: 8b60  ASSIGN Vb = V6
+Address 3b4: 620b  ASSIGN V2 = 0b
+Address 3b6: f218  ASSIGN sound_timer = V2
+Address 3b8: f215  ASSIGN delay_timer = V2
+Address 3ba: 79f8  ASSIGN V9 += f8
+Address 3bc: 2763  CALL 763
+Address 3be: 7301  ASSIGN V3 += 01
+Address 3c0: 23d4  CALL 3d4
+Address 3c2: 330b  SKIP NEXT OP IF V3 == b
+Address 3c4: 13b8  GOTO 3b8
+Address 3c6: 00ee  RETURN
+Address 3c8: 6001  ASSIGN V0 = 01
+Address 3ca: f018  ASSIGN sound_timer = V0
+Address 3cc: 682c  ASSIGN V8 = 2c
+Address 3ce: 2dbc  CALL dbc
+Address 3d0: 6021  ASSIGN V0 = 21
+Address 3d2: f015  ASSIGN delay_timer = V0
+Address 3d4: f007  ASSIGn V0 = delay_timer
+Address 3d6: 3000  SKIP NEXT OP IF V0 == 0
+Address 3d8: 13d4  GOTO 3d4
+Address 3da: 00ee  RETURN
+Address 3dc: e5a1  SKIP NEXT OP IF V5 is not pressed
+Address 3de: 13dc  GOTO 3dc
+Address 3e0: a7fe  SET I = 7fe
+Address 3e2: dbc5  DRAW I at (Vb, Vc) with height 5
+Address 3e4: 2d54  CALL d54
+Address 3e6: 681d  ASSIGN V8 = 1d
+Address 3e8: 2dbc  CALL dbc
+Address 3ea: f90a  ASSIGN V9 = get_key
+Address 3ec: 681d  ASSIGN V8 = 1d
+Address 3ee: 2dbc  CALL dbc
+Address 3f0: 390a  SKIP NEXT OP IF V9 == a
+Address 3f2: 13f8  GOTO 3f8
+Address 3f4: 23c8  CALL 3c8
+Address 3f6: 169d  GOTO 69d
+Address 3f8: 2dbc  CALL dbc
+Address 3fa: f90a  ASSIGN V9 = get_key
+Address 3fc: 6825  ASSIGN V8 = 25
+Address 3fe: 2dbc  CALL dbc
+Address 400: 390a  SKIP NEXT OP IF V9 == a
+Address 402: 1408  GOTO 408
+Address 404: 23c8  CALL 3c8
+Address 406: 1559  GOTO 559
+Address 408: 2d54  CALL d54
+Address 40a: 127a  GOTO 27a
+Address 40c: 3036  SKIP NEXT OP IF V0 == 36
+Address 40e: 2824  CALL 824
+Address 410: 3034  SKIP NEXT OP IF V0 == 34
+Address 412: 2878  CALL 878
+Address 414: 2e36  CALL e36
+Address 416: 2876  CALL 876
+Address 418: 2e34  CALL e34
+Address 41a: 2800  CALL 800
+Address 41c: 0000  
+Address 41e: 363b  SKIP NEXT OP IF V6 == 3b
+Address 420: 142c  GOTO 42c
+Address 422: 3108  SKIP NEXT OP IF V1 == 8
+Address 424: 0000  
+Address 426: 002c  
+Address 428: 31a4  SKIP NEXT OP IF V1 == a4
+Address 42a: 1cf4  GOTO cf4
+Address 42c: 65f5  ASSIGN V5 = f5
+Address 42e: 187d  GOTO 87d
+Address 430: 01a4  
+Address 432: 1bfd  GOTO bfd
+Address 434: 3341  SKIP NEXT OP IF V3 == 41
+Address 436: 0914  
+Address 438: 45f1  SKIP NEXT OP IF V5 != f1
+Address 43a: 29d3  CALL 9d3
+Address 43c: 4571  SKIP NEXT OP IF V5 != 71
+Address 43e: 01f1  
+Address 440: 29d3  CALL 9d3
+Address 442: 4500  SKIP NEXT OP IF V5 != 0
+Address 444: eef0  
+Address 446: 29d2  CALL 9d2
+Address 448: 45f1  SKIP NEXT OP IF V5 != f1
+Address 44a: 29d3  CALL 9d3
+Address 44c: 45a4  SKIP NEXT OP IF V5 != a4
+Address 44e: 1cf1  GOTO cf1
+Address 450: 65f0  ASSIGN V5 = f0
+Address 452: 29d2  CALL 9d2
+Address 454: 45f1  SKIP NEXT OP IF V5 != f1
+Address 456: 29d3  CALL 9d3
+Address 458: 454d  SKIP NEXT OP IF V5 != 4d
+Address 45a: 6414  ASSIGN V4 = 14
+Address 45c: 5f00  SKIP NEXT OP IF Vf == V0
+Address 45e: eea4  
+Address 460: 25f3  CALL 5f3
+Address 462: 656d  ASSIGN V5 = 6d
+Address 464: 0077  
+Address 466: 0147  
+Address 468: 6467  ASSIGN V4 = 67
+Address 46a: 00a4  
+Address 46c: 24f7  CALL 4f7
+Address 46e: 33f0  SKIP NEXT OP IF V3 == f0
+Address 470: 29d2  CALL 9d2
+Address 472: 45f1  SKIP NEXT OP IF V5 != f1
+Address 474: 29d3  CALL 9d3
+Address 476: 45a4  SKIP NEXT OP IF V5 != a4
+Address 478: 25f1  CALL 5f1
+Address 47a: 65f0  ASSIGN V5 = f0
+Address 47c: 29d2  CALL 9d2
+Address 47e: 45f1  SKIP NEXT OP IF V5 != f1
+Address 480: 29d3  CALL 9d3
+Address 482: 4500  SKIP NEXT OP IF V5 != 0
+Address 484: ee68  
+Address 486: 018a  
+Address 488: c089  SET V0 = RANDOM & 89
+Address 48a: c0a8  SET V0 = RANDOM & a8
+Address 48c: 12db  GOTO 2db
+Address 48e: 95db  SKIP NEXT OP IF V5 != Vd
+Address 490: 954f  SKIP NEXT OP IF V5 != V4
+Address 492: 0114  
+Address 494: a579  SET I = 579
+Address 496: 05db  
+Address 498: 95db  SKIP NEXT OP IF V5 != Vd
+Address 49a: 954f  SKIP NEXT OP IF V5 != V4
+Address 49c: 0114  
+Address 49e: a579  SET I = 579
+Address 4a0: 0578  
+Address 4a2: 0200  
+Address 4a4: eea8  
+Address 4a6: 16db  GOTO 6db
+Address 4a8: a1db  SET I = 1db
+Address 4aa: a14f  SET I = 14f
+Address 4ac: 0114  
+Address 4ae: bf7a  GO TO V0 + f7a
+Address 4b0: fbdb  
+Address 4b2: a1db  SET I = 1db
+Address 4b4: a14f  SET I = 14f
+Address 4b6: 0114  
+Address 4b8: bf7a  GO TO V0 + f7a
+Address 4ba: fb78  
+Address 4bc: 0200  
+Address 4be: ee80  
+Address 4c0: 9080  SKIP NEXT OP IF V0 != V8
+Address 4c2: a540  SET I = 540
+Address 4c4: 0a78  
+Address 4c6: 0200  
+Address 4c8: ee68  
+Address 4ca: 004c  
+Address 4cc: 0b78  
+Address 4ce: 0489  
+Address 4d0: b086  GO TO V0 + 086
+Address 4d2: b0a8  GO TO V0 + 0a8
+Address 4d4: 1ad6  GOTO ad6
+Address 4d6: c3d6  SET V3 = RANDOM & d6
+Address 4d8: c34f  SET V3 = RANDOM & 4f
+Address 4da: 0114  
+Address 4dc: ed76  
+Address 4de: 05d6  
+Address 4e0: c3d6  SET V3 = RANDOM & d6
+Address 4e2: c34f  SET V3 = RANDOM & 4f
+Address 4e4: 0114  
+Address 4e6: ed76  
+Address 4e8: 0578  
+Address 4ea: 0200  
+Address 4ec: eea8  
+Address 4ee: 17d9  GOTO 7d9
+Address 4f0: c3d9  SET V3 = RANDOM & d9
+Address 4f2: c34f  SET V3 = RANDOM & 4f
+Address 4f4: 0115  
+Address 4f6: 0779  
+Address 4f8: fbd9  
+Address 4fa: c3d9  SET V3 = RANDOM & d9
+Address 4fc: c34f  SET V3 = RANDOM & 4f
+Address 4fe: 0115  
+Address 500: 0779  
+Address 502: fb78  
+Address 504: 0200  
+Address 506: ee80  
+Address 508: 6080  ASSIGN V0 = 80
+Address 50a: 9540  SKIP NEXT OP IF V5 != V4
+Address 50c: 0a78  
+Address 50e: 0200  
+Address 510: ee2d  
+Address 512: 54f9  SKIP NEXT OP IF V4 == Vf
+Address 514: 1868  GOTO 868
+Address 516: 362d  SKIP NEXT OP IF V6 == 2d
+Address 518: bc60  GO TO V0 + c60
+Address 51a: 2d23  CALL d23
+Address 51c: d200  DRAW I at (V2, V0) with height 0
+Address 51e: e0a8  
+Address 520: 95fa  SKIP NEXT OP IF V5 != Vf
+Address 522: 65f3  ASSIGN V5 = f3
+Address 524: 15a8  GOTO 5a8
+Address 526: 96f2  SKIP NEXT OP IF V6 != Vf
+Address 528: 1ef1  GOTO ef1
+Address 52a: 65a8  ASSIGN V5 = a8
+Address 52c: 74f0  ASSIGN V4 += f0
+Address 52e: 1e23  GOTO e23
+Address 530: d4d4  DRAW I at (V4, Vd) with height 4
+Address 532: a7f1  SET I = 7f1
+Address 534: 1ed9  GOTO ed9
+Address 536: a7fa  SET I = 7fa
+Address 538: 1874  GOTO 874
+Address 53a: 0879  
+Address 53c: f872  
+Address 53e: 0232  
+Address 540: 0815  
+Address 542: 2360  CALL 360
+Address 544: 0a23  
+Address 546: d268  DRAW I at (V2, V6) with height 8
+Address 548: 4d2d  SKIP NEXT OP IF Vd != 2d
+Address 54a: bc2d  GO TO V0 + c2d
+Address 54c: 4650  SKIP NEXT OP IF V6 != 50
+Address 54e: 101f  GOTO 01f
+Address 550: 2c23  CALL c23
+Address 552: d068  DRAW I at (V0, V6) with height 8
+Address 554: 612d  ASSIGN V1 = 2d
+Address 556: bcf0  GO TO V0 + cf0
+Address 558: 0a00  
+Address 55a: e060  
+Address 55c: 0f23  
+Address 55e: d2a8  DRAW I at (V2, Va) with height 8
+Address 560: 91f1  SKIP NEXT OP IF V1 != Vf
+Address 562: 65a7  ASSIGN V5 = a7
+Address 564: 0bf1  
+Address 566: 55a7  SKIP NEXT OP IF V5 == Va
+Address 568: f6f5  
+Address 56a: 65a8  ASSIGN V5 = a8
+Address 56c: 28d5  CALL 8d5
+Address 56e: 4675  SKIP NEXT OP IF V6 != 75
+Address 570: 0835  
+Address 572: 4015  SKIP NEXT OP IF V0 != 15
+Address 574: 6dd4  ASSIGN Vd = d4
+Address 576: 0dd4  
+Address 578: 1c74  GOTO c74
+Address 57a: 0834  
+Address 57c: 2815  CALL 815
+Address 57e: 7572  ASSIGN V5 += 72
+Address 580: 0661  
+Address 582: 08a7  
+Address 584: 9942  SKIP NEXT OP IF V9 != V4
+Address 586: 20a7  CALL 0a7
+Address 588: 95d2  SKIP NEXT OP IF V5 != Vd
+Address 58a: 15a8  GOTO 5a8
+Address 58c: 02f3  
+Address 58e: 1e73  GOTO e73
+Address 590: 01f0  
+Address 592: 65a7  ASSIGN V5 = a7
+Address 594: fb30  
+Address 596: 00d2  
+Address 598: 1442  GOTO 442
+Address 59a: 2015  CALL 015
+Address 59c: bb61  GO TO V0 + b61
+Address 59e: 07a8  
+Address 5a0: 02f3  
+Address 5a2: 1ef0  GOTO ef0
+Address 5a4: 6571  ASSIGN V5 = 71
+Address 5a6: 0641  
+Address 5a8: 1f15  GOTO f15
+Address 5aa: 7fa7  ASSIGN Vf += a7
+Address 5ac: 94d2  SKIP NEXT OP IF V4 != Vd
+Address 5ae: 1640  GOTO 640
+Address 5b0: 0015  
+Address 5b2: a5a7  SET I = 5a7
+Address 5b4: fad2  
+Address 5b6: 1570  GOTO 570
+Address 5b8: ff15  ASSIGN delay_timer = Vf
+Address 5ba: a568  SET I = 568
+Address 5bc: 3c2d  SKIP NEXT OP IF Vc == 2d
+Address 5be: bca8  GO TO V0 + ca8
+Address 5c0: 88fe  SHIFT V8 left one bit
+Address 5c2: 6567  ASSIGN V5 = 67
+Address 5c4: 0a26  
+Address 5c6: 35a7  SKIP NEXT OP IF V5 == a7
+Address 5c8: 8ed7  ASSIGN Ve = Vd - Ve
+Address 5ca: b123  GO TO V0 + 123
+Address 5cc: d4f9  DRAW I at (V4, Vf) with height 9
+Address 5ce: 0ad7  
+Address 5d0: b149  GO TO V0 + 149
+Address 5d2: 0115  
+Address 5d4: 1149  GOTO 149
+Address 5d6: 0a16  
+Address 5d8: 7f60  ASSIGN Vf += 60
+Address 5da: 06f0  
+Address 5dc: 1526  GOTO 526
+Address 5de: 3d66  SKIP NEXT OP IF Vd == 66
+Address 5e0: 0049  
+Address 5e2: 0515  
+Address 5e4: ff49  
+Address 5e6: 0816  
+Address 5e8: 0d49  
+Address 5ea: 0916  
+Address 5ec: 1d39  GOTO d39
+Address 5ee: 0715  
+Address 5f0: c547  SET V5 = RANDOM & 47
+Address 5f2: 0a15  
+Address 5f4: c57c  SET V5 = RANDOM & 7c
+Address 5f6: ff77  
+Address 5f8: fa66  
+Address 5fa: ff65  LOAD memory starting at I into registers V0 to Vf
+Address 5fc: 7416  ASSIGN V4 += 16
+Address 5fe: 2f4b  CALL f4b
+Address 600: 0a15  
+Address 602: c57d  SET V5 = RANDOM & 7d
+Address 604: ff7b  
+Address 606: fa66  
+Address 608: ff65  LOAD memory starting at I into registers V0 to Vf
+Address 60a: ba16  GO TO V0 + a16
+Address 60c: 314b  SKIP NEXT OP IF V1 == 4b
+Address 60e: 1c15  GOTO c15
+Address 610: c547  SET V5 = RANDOM & 47
+Address 612: 2215  CALL 215
+Address 614: c57d  SET V5 = RANDOM & 7d
+Address 616: 017b  
+Address 618: 0665  
+Address 61a: 4616  SKIP NEXT OP IF V6 != 16
+Address 61c: 3147  SKIP NEXT OP IF V1 == 47
+Address 61e: 2215  CALL 215
+Address 620: c537  SET V5 = RANDOM & 37
+Address 622: 1c16  GOTO c16
+Address 624: 293b  CALL 93b
+Address 626: 0a15  
+Address 628: c57c  SET V5 = RANDOM & 7c
+Address 62a: 0177  
+Address 62c: 0665  
+Address 62e: 8c26  SHIFT Vc right one bit
+Address 630: 6326  ASSIGN V3 = 26
+Address 632: 6315  ASSIGN V3 = 15
+Address 634: c580  SET V5 = RANDOM & 80
+Address 636: c081  SET V0 = RANDOM & 81
+Address 638: d0a7  DRAW I at (V0, Va) with height 7
+Address 63a: ecf1  
+Address 63c: 55a4  SKIP NEXT OP IF V5 == Va
+Address 63e: 1ef5  GOTO ef5
+Address 640: 654e  ASSIGN V5 = 4e
+Address 642: 0016  
+Address 644: 55a5  SKIP NEXT OP IF V5 == Va
+Address 646: 5ad0  SKIP NEXT OP IF Va == Vd
+Address 648: 5175  SKIP NEXT OP IF V1 == V7
+Address 64a: fe80  
+Address 64c: e040  
+Address 64e: 0a60  
+Address 650: 0ff0  
+Address 652: 29d1  CALL 9d1
+Address 654: 55a7  SKIP NEXT OP IF V5 == Va
+Address 656: ecf1  
+Address 658: 65f1  ASSIGN V5 = f1
+Address 65a: 29d4  CALL 9d4
+Address 65c: 55f0  SKIP NEXT OP IF V5 == Vf
+Address 65e: 29d3  CALL 9d3
+Address 660: 5500  SKIP NEXT OP IF V5 == V0
+Address 662: eea7  
+Address 664: 0bf1  
+Address 666: 6582  ASSIGN V5 = 82
+Address 668: 6081  ASSIGN V0 = 81
+Address 66a: 544f  SKIP NEXT OP IF V4 == V4
+Address 66c: 0116  
+Address 66e: 7546  ASSIGN V5 += 46
+Address 670: ff70  
+Address 672: ff16  
+Address 674: 7946  ASSIGN V9 += 46
+Address 676: 0070  
+Address 678: 01a7  
+Address 67a: 0bf1  
+Address 67c: 5500  SKIP NEXT OP IF V5 == V0
+Address 67e: ee4f  
+Address 680: 0116  
+Address 682: 972d  SKIP NEXT OP IF V7 != V2
+Address 684: 54f9  SKIP NEXT OP IF V4 == Vf
+Address 686: 1868  GOTO 868
+Address 688: 302d  SKIP NEXT OP IF V0 == 2d
+Address 68a: bc60  GO TO V0 + c60
+Address 68c: 2d23  CALL d23
+Address 68e: d268  DRAW I at (V2, V6) with height 8
+Address 690: 302d  SKIP NEXT OP IF V0 == 2d
+Address 692: bc2d  GO TO V0 + c2d
+Address 694: 5415  SKIP NEXT OP IF V4 == V1
+Address 696: c72d  SET V7 = RANDOM & 2d
+Address 698: 5423  SKIP NEXT OP IF V4 == V2
+Address 69a: c87e  SET V8 = RANDOM & 7e
+Address 69c: 0100  
+Address 69e: e02d  
+Address 6a0: 5468  SKIP NEXT OP IF V4 == V6
+Address 6a2: 002d  
+Address 6a4: bc26  GO TO V0 + c26
+Address 6a6: 3d88  SKIP NEXT OP IF Vd == 88
+Address 6a8: e078  
+Address 6aa: ff80  
+Address 6ac: 0e88  
+Address 6ae: 0488  
+Address 6b0: 5288  SKIP NEXT OP IF V2 == V8
+Address 6b2: 8ea2  ASSIGN Ve &= Va
+Address 6b4: 0cf7  
+Address 6b6: 65a2  ASSIGN V5 = a2
+Address 6b8: 14f8  GOTO 4f8
+Address 6ba: 1ef3  GOTO ef3
+Address 6bc: 6585  ASSIGN V5 = 85
+Address 6be: 1087  GOTO 087
+Address 6c0: 30a2  SKIP NEXT OP IF V0 == a2
+Address 6c2: 0cf7  
+Address 6c4: 55a7  SKIP NEXT OP IF V5 == Va
+Address 6c6: dffc  DRAW I at (Vf, Vf) with height c
+Address 6c8: 65a4  ASSIGN V5 = a4
+Address 6ca: 1cf1  GOTO cf1
+Address 6cc: 55a4  SKIP NEXT OP IF V5 == Va
+Address 6ce: 25f1  CALL 5f1
+Address 6d0: 55a8  SKIP NEXT OP IF V5 == Va
+Address 6d2: 5727  SKIP NEXT OP IF V7 == V2
+Address 6d4: 5162  SKIP NEXT OP IF V1 == V6
+Address 6d6: 0fa8  
+Address 6d8: 6827  ASSIGN V8 = 27
+Address 6da: 51fc  SKIP NEXT OP IF V1 == Vf
+Address 6dc: 29d3  CALL 9d3
+Address 6de: 5573  SKIP NEXT OP IF V5 == V7
+Address 6e0: 0533  
+Address 6e2: 4016  SKIP NEXT OP IF V0 != 16
+Address 6e4: dda7  DRAW I at (Vd, Va) with height 7
+Address 6e6: abd4  SET I = bd4
+Address 6e8: cad4  SET Va = RANDOM & d4
+Address 6ea: 6ad4  ASSIGN Va = d4
+Address 6ec: 5cdc  SKIP NEXT OP IF Vc == Vd
+Address 6ee: cadc  SET Va = RANDOM & dc
+Address 6f0: 6adc  ASSIGN Va = dc
+Address 6f2: 5ca8  SKIP NEXT OP IF Vc == Va
+Address 6f4: 28d7  CALL 8d7
+Address 6f6: afd7  SET I = fd7
+Address 6f8: 8f77  ASSIGN Vf = V7 - Vf
+Address 6fa: 0837  
+Address 6fc: 2416  CALL 416
+Address 6fe: f5a7  
+Address 700: 8dd4  ASSIGN Vd += Vd, possibly set carry flag
+Address 702: 6768  ASSIGN V7 = 68
+Address 704: ff3b  
+Address 706: 0017  
+Address 708: 156b  GOTO 56b
+Address 70a: 08a8  
+Address 70c: a0fc  SET I = fc
+Address 70e: 1ef0  GOTO ef0
+Address 710: 658d  ASSIGN V5 = 8d
+Address 712: 007c  
+Address 714: 017b  
+Address 716: ff8d  
+Address 718: d64f  DRAW I at (V6, V4) with height f
+Address 71a: 0017  
+Address 71c: 2378  CALL 378
+Address 71e: 0138  
+Address 720: 0317  
+Address 722: 0548  
+Address 724: ff17  
+Address 726: 3b4a  SKIP NEXT OP IF Vb == 4a
+Address 728: 0b78  
+Address 72a: 0427  
+Address 72c: 6388  ASSIGN V3 = 88
+Address 72e: 864f  
+Address 730: 0117  
+Address 732: 3b79  SKIP NEXT OP IF Vb == 79
+Address 734: fd88  
+Address 736: 864f  
+Address 738: 0179  
+Address 73a: 0579  
+Address 73c: 0539  
+Address 73e: 2317  CALL 317
+Address 740: 0369  
+Address 742: 057a  
+Address 744: 053a  
+Address 746: 1f17  GOTO f17
+Address 748: 03a7  
+Address 74a: e3fd  
+Address 74c: 652d  ASSIGN V5 = 2d
+Address 74e: bc14  GO TO V0 + c14
+Address 750: 0860  
+Address 752: 29d0  CALL 9d0
+Address 754: 2470  CALL 470
+Address 756: 0840  
+Address 758: 4100  SKIP NEXT OP IF V1 != 0
+Address 75a: eef7  
+Address 75c: 1e17  GOTO e17
+Address 75e: 532d  SKIP NEXT OP IF V3 == V2
+Address 760: 1f1b  GOTO f1b
+Address 762: 24a2  CALL 4a2
+Address 764: 0bf8  
+Address 766: 1ef1  GOTO ef1
+Address 768: 6580  ASSIGN V5 = 80
+Address 76a: 8080  ASSIGN V0 = V8
+Address 76c: 064f  
+Address 76e: 0117  
+Address 770: 85a7  ASSIGN V5 = Va - V5
+Address 772: 5ff0  SKIP NEXT OP IF Vf == Vf
+Address 774: 1ef0  GOTO ef0
+Address 776: 65a7  ASSIGN V5 = a7
+Address 778: 9df1  SKIP NEXT OP IF Vd != Vf
+Address 77a: 1ed9  GOTO ed9
+Address 77c: a5f0  SET I = 5f0
+Address 77e: 1e79  GOTO e79
+Address 780: 08d9  
+Address 782: a500  SET I = 500
+Address 784: eea7  
+Address 786: 9df1  SKIP NEXT OP IF Vd != Vf
+Address 788: 1ed9  GOTO ed9
+Address 78a: af00  SET I = f00
+Address 78c: eed0  
+Address 78e: 8080  ASSIGN V0 = V8
+Address 790: 8080  ASSIGN V0 = V8
+Address 792: 80d0  ASSIGN V0 = Vd
+Address 794: 20f8  CALL 0f8
+Address 796: 8888  
+Address 798: 88f8  
+Address 79a: 888c  
+Address 79c: 88f8  
+Address 79e: d8d8  DRAW I at (V8, Vd) with height 8
+Address 7a0: d8d8  DRAW I at (V8, Vd) with height 8
+Address 7a2: d8d8  DRAW I at (V8, Vd) with height 8
+Address 7a4: d8d8  DRAW I at (V8, Vd) with height 8
+Address 7a6: d8d8  DRAW I at (V8, Vd) with height 8
+Address 7a8: d8d8  DRAW I at (V8, Vd) with height 8
+Address 7aa: d8f8  DRAW I at (V8, Vf) with height 8
+Address 7ac: f8f8  
+Address 7ae: f8f8  
+Address 7b0: f8f8  
+Address 7b2: f8f8  
+Address 7b4: f8f8  
+Address 7b6: f888  
+Address 7b8: a8a8  SET I = 8a8
+Address 7ba: 8888  
+Address 7bc: a8a8  SET I = 8a8
+Address 7be: a888  SET I = 888
+Address 7c0: 88a8  
+Address 7c2: a888  SET I = 888
+Address 7c4: f888  
+Address 7c6: c8a8  SET V8 = RANDOM & a8
+Address 7c8: 9888  SKIP NEXT OP IF V8 != V8
+Address 7ca: c8a8  SET V8 = RANDOM & a8
+Address 7cc: 9888  SKIP NEXT OP IF V8 != V8
+Address 7ce: c8a8  SET V8 = RANDOM & a8
+Address 7d0: 9888  SKIP NEXT OP IF V8 != V8
+Address 7d2: f888  
+Address 7d4: a8a8  SET I = 8a8
+Address 7d6: 8888  
+Address 7d8: a8a8  SET I = 8a8
+Address 7da: 88f8  
+Address 7dc: 0000  
+Address 7de: 0000  
+Address 7e0: 0001  
+Address 7e2: 2c23  CALL c23
+Address 7e4: 140a  GOTO 40a
+Address 7e6: 0410  
+Address 7e8: 0501  
+Address 7ea: 0000  
+Address 7ec: 0000  
+Address 7ee: 0501  
+Address 7f0: 0009  
+Address 7f2: 0508  
+Address 7f4: 0a01  
+Address 7f6: 0714  
+Address 7f8: 0200  
+Address 7fa: 0000  
+Address 7fc: 7070  ASSIGN V0 += 70
+Address 7fe: 70f8  ASSIGN V0 += f8
+Address 800: f8f8  
+Address 802: 7000  ASSIGN V0 += 00
+Address 804: 0000  
+Address 806: 00f8  
+Address 808: d8d8  DRAW I at (V8, Vd) with height 8
+Address 80a: d8d8  DRAW I at (V8, Vd) with height 8
+Address 80c: d8d8  DRAW I at (V8, Vd) with height 8
+Address 80e: d8d8  DRAW I at (V8, Vd) with height 8
+Address 810: f800  
+Address 812: 0000  
+Address 814: 0000  
+Address 816: 2000  CALL 000
+Address 818: 0080  
+Address 81a: 0000  
+Address 81c: 08ff  
+Address 81e: 8891  ASSIGN V8 |= V9
+Address 820: a2ff  SET I = 2ff
+Address 822: 80b3  ASSIGN V0 ^= Vb
+Address 824: 80ff  
+Address 826: ff80  
+Address 828: ffff  
+Address 82a: ffff  
+Address 82c: ffff  
+Address 82e: ffff  
+Address 830: ffff  
+Address 832: ffff  
+Address 834: ffff  
+Address 836: fffd  
+Address 838: fc80  
+Address 83a: fcfd  
+Address 83c: fe8a  
+Address 83e: 1222  GOTO 222
+Address 840: fe02  
+Address 842: 9a02  SKIP NEXT OP IF Va != V0
+Address 844: fefe  
+Address 846: 02fe  
+Address 848: feee  
+Address 84a: e602  
+Address 84c: e6ee  
+Address 84e: c040  SET V0 = RANDOM & 40
+Address 850: 4040  SKIP NEXT OP IF V0 != 40
+Address 852: c0c0  SET V0 = RANDOM & c0
+Address 854: 40c0  SKIP NEXT OP IF V0 != c0
+Address 856: c083  SET V0 = RANDOM & 83
+Address 858: e494  
+Address 85a: e333  
+Address 85c: 8aaa  
+Address 85e: 1a08  GOTO a08
+Address 860: 3848  SKIP NEXT OP IF V8 == 48
+Address 862: 3838  SKIP NEXT OP IF V8 == 38
+Address 864: 3838  SKIP NEXT OP IF V8 == 38
+Address 866: 3838  SKIP NEXT OP IF V8 == 38
+Address 868: f1aa  
+Address 86a: aaa9  SET I = aa9
+Address 86c: 9455  SKIP NEXT OP IF V4 != V5
+Address 86e: 4988  SKIP NEXT OP IF V9 != 88
+Address 870: 8c50  ASSIGN Vc = V5
+Address 872: 04d8  
+Address 874: fce6  
+Address 876: e6e4  
+Address 878: f8ec  
+Address 87a: e6e6  
+Address 87c: e6fe  
+Address 87e: e6e6  
+Address 880: e6e6  
+Address 882: e6e6  
+Address 884: 7ce6  ASSIGN Vc += e6
+Address 886: e07c  
+Address 888: 06e6  
+Address 88a: 7ce6  ASSIGN Vc += e6
+Address 88c: e6e6  
+Address 88e: e6e6  
+Address 890: 7ca8  ASSIGN Vc += a8
+Address 892: a00a  SET I = 0a
+Address 894: 010a  
+Address 896: 0000  
+Address 898: 0a00  
+Address 89a: 1006  GOTO 006
+Address 89c: 0600  
+Address 89e: 3901  SKIP NEXT OP IF V9 == 1
+Address 8a0: e19f  
+Address 8a2: 4700  SKIP NEXT OP IF V7 != 0
+Address 8a4: 8638  
+Address 8a6: 00e3  
+Address 8a8: 301f  SKIP NEXT OP IF V0 == 1f
+Address 8aa: 7360  ASSIGN V3 += 60
+Address 8ac: 4a00  SKIP NEXT OP IF Va != 0
+Address 8ae: 00a0  
+Address 8b0: 47bc  SKIP NEXT OP IF V7 != bc
+Address 8b2: 0101  
+Address 8b4: 00cf  
+Address 8b6: 0308  
+Address 8b8: ecc0  
+Address 8ba: 3800  SKIP NEXT OP IF V8 == 0
+Address 8bc: 797b  ASSIGN V9 += 7b
+Address 8be: 3c31  SKIP NEXT OP IF Vc == 31
+Address 8c0: c710  SET V7 = RANDOM & 10
+Address 8c2: 0419  
+Address 8c4: f1af  
+Address 8c6: a761  SET I = 761
+Address 8c8: 0007  
+Address 8ca: d686  DRAW I at (V6, V8) with height 6
+Address 8cc: 2146  CALL 146
+Address 8ce: 6000  ASSIGN V0 = 00
+Address 8d0: 00e8  
+Address 8d2: 69da  ASSIGN V9 = da
+Address 8d4: 88da  
+Address 8d6: e500  
+Address 8d8: 5658  SKIP NEXT OP IF V6 == V5
+Address 8da: f1fb  
+Address 8dc: 8331  ASSIGN V3 |= V3
+Address 8de: 004d  
+Address 8e0: e13f  
+Address 8e2: 38b0  SKIP NEXT OP IF V8 == b0
+Address 8e4: 2200  CALL 200
+Address 8e6: df03  DRAW I at (Vf, V0) with height 3
+Address 8e8: 08ec  
+Address 8ea: c038  SET V0 = RANDOM & 38
+Address 8ec: 008b  
+Address 8ee: e711  
+Address 8f0: e060  
+Address 8f2: 0e00  
+Address 8f4: 358c  SKIP NEXT OP IF V5 == 8c
+Address 8f6: 3779  SKIP NEXT OP IF V7 == 79
+Address 8f8: 8225  ASSIGN V2 -= V2
+Address 8fa: 010d  
+Address 8fc: d0d6  DRAW I at (V0, Vd) with height 6
+Address 8fe: 4630  SKIP NEXT OP IF V6 != 30
+Address 900: 0500  
+Address 902: 4afd  SKIP NEXT OP IF Va != fd
+Address 904: ff07  ASSIGn Vf = delay_timer
+Address 906: 1b90  GOTO b90
+Address 908: 02b5  
+Address 90a: 9fb0  SKIP NEXT OP IF Vf != Vb
+Address 90c: 0f0e  
+Address 90e: 0800  
+Address 910: 3ba8  SKIP NEXT OP IF Vb == a8
+Address 912: 863c  
+Address 914: 673b  ASSIGN V7 = 3b
+Address 916: 00ed  
+Address 918: 093e  
+Address 91a: 3884  SKIP NEXT OP IF V8 == 84
+Address 91c: 0300  
+Address 91e: 2c30  CALL c30
+Address 920: 1634  GOTO 634
+Address 922: 0e00  
+Address 924: 00e3  
+Address 926: 341a  SKIP NEXT OP IF V4 == 1a
+Address 928: 0fb0  
+Address 92a: e000  
+Address 92c: ed79  
+Address 92e: 2038  CALL 038
+Address 930: 001c  
+Address 932: 00ec  
+Address 934: c627  SET V6 = RANDOM & 27
+Address 936: 184d  GOTO 84d
+Address 938: e600  
+Address 93a: dcb3  DRAW I at (Vc, Vb) with height 3
+Address 93c: 206c  CALL 06c
+Address 93e: 411c  SKIP NEXT OP IF V1 != 1c
+Address 940: 002c  
+Address 942: 06d3  
+Address 944: 0867  
+Address 946: 0200  
+Address 948: 4de1  SKIP NEXT OP IF Vd != e1
+Address 94a: 3fe3  SKIP NEXT OP IF Vf == e3
+Address 94c: 300b  SKIP NEXT OP IF V0 == b
+Address 94e: 02e6  
+Address 950: c69e  SET V6 = RANDOM & 9e
+Address 952: d80e  DRAW I at (V8, V0) with height e
+Address 954: c610  SET V6 = RANDOM & 10
+Address 956: eb11  
+Address 958: 1a8f  GOTO a8f
+Address 95a: 30e0  SKIP NEXT OP IF V0 == e0
+Address 95c: 0037  
+Address 95e: 7805  ASSIGN V8 += 05
+Address 960: 9b9e  SKIP NEXT OP IF Vb != V9
+Address 962: 5300  SKIP NEXT OP IF V3 == V0
+Address 964: e731  
+Address 966: 84ad  
+Address 968: 6876  ASSIGN V8 = 76
+Address 96a: 006f  
+Address 96c: 8721  ASSIGN V7 |= V2
+Address 96e: 9407  SKIP NEXT OP IF V4 != V0
+Address 970: 0a00  
+Address 972: 39ac  SKIP NEXT OP IF V9 == ac
+Address 974: c5f3  SET V5 = RANDOM & f3
+Address 976: 0970  
+Address 978: 00fd  
+Address 97a: 0282  
+Address 97c: d563  DRAW I at (V5, V6) with height 3
+Address 97e: 0400  
+Address 980: f602  
+Address 982: 82d5  ASSIGN V2 -= Vd
+Address 984: 6b73  ASSIGN Vb = 73
+Address 986: 00e3  
+Address 988: 301f  SKIP NEXT OP IF V0 == 1f
+Address 98a: 7383  ASSIGN V3 += 83
+Address 98c: 2901  CALL 901
+Address 98e: 7c8f  ASSIGN Vc += 8f
+Address 990: 11ec  GOTO 1ec
+Address 992: d026  DRAW I at (V0, V2) with height 6
+Address 994: 007f  
+Address 996: 599e  SKIP NEXT OP IF V9 == V9
+Address 998: b8c1  GO TO V0 + 8c1
+Address 99a: 1400  GOTO 400
+Address 99c: 4df1  SKIP NEXT OP IF Vd != f1
+Address 99e: ffc1  
+Address 9a0: 8115  ASSIGN V1 -= V1
+Address 9a2: 01e3  
+Address 9a4: 341a  SKIP NEXT OP IF V4 == 1a
+Address 9a6: 8fb0  ASSIGN Vf = Vb
+Address 9a8: e000  
+Address 9aa: ec30  
+Address 9ac: 1a9f  GOTO a9f
+Address 9ae: 6c41  ASSIGN Vc = 41
+Address 9b0: 009f  
+Address 9b2: b1f1  GO TO V0 + 1f1
+Address 9b4: c80d  SET V8 = RANDOM & 0d
+Address 9b6: a604  SET I = 604
+Address 9b8: 7ac0  ASSIGN Va += c0
+Address 9ba: 2ff0  CALL ff0
+Address 9bc: 0110  
+Address 9be: 00ec  
+Address 9c0: f009  
+Address 9c2: 4693  SKIP NEXT OP IF V6 != 93
+Address 9c4: 3900  SKIP NEXT OP IF V9 == 0
+Address 9c6: 0da6  
+Address 9c8: 7f61  ASSIGN Vf += 61
+Address 9ca: c156  SET V1 = RANDOM & 56
+Address 9cc: 00f7  
+Address 9ce: 1b43  GOTO b43
+Address 9d0: 4cd9  SKIP NEXT OP IF Vc != d9
+Address 9d2: 080e  
+Address 9d4: e69e  SKIP NEXT OP IF V6 is pressed
+Address 9d6: 8da0  ASSIGN Vd = Va
+Address 9d8: 9e25  SKIP NEXT OP IF Ve != V2
+Address 9da: 00ec  
+Address 9dc: 6216  ASSIGN V2 = 16
+Address 9de: 6c3d  ASSIGN Vc = 3d
+Address 9e0: e200  
+Address 9e2: 67db  ASSIGN V7 = db
+Address 9e4: c1b7  SET V1 = RANDOM & b7
+Address 9e6: 00eb  
+Address 9e8: 00ea  
+Address 9ea: 0f2c  
+Address 9ec: 5907  SKIP NEXT OP IF V9 == V0
+Address 9ee: 0a00  
+Address 9f0: de1a  DRAW I at (Ve, V1) with height a
+Address 9f2: 3662  SKIP NEXT OP IF V6 == 62
+Address 9f4: cd18  SET Vd = RANDOM & 18
+Address 9f6: 705a  ASSIGN V0 += 5a
+Address 9f8: 627c  ASSIGN V2 = 7c
+Address 9fa: c20f  SET V2 = RANDOM & 0f
+Address 9fc: 2800  CALL 800
+Address 9fe: 6d0c  ASSIGN Vd = 0c
+Address a00: 69d3  ASSIGN V9 = d3
+Address a02: 80d6  SHIFT V0 right one bit
+Address a04: 01f6  
+Address a06: 82d2  ASSIGN V2 &= Vd
+Address a08: efd0  
+Address a0a: 8000  ASSIGN V0 = V0
+Address a0c: eb07  
+Address a0e: 6830  ASSIGN V8 = 30
+Address a10: c75a  SET V7 = RANDOM & 5a
+Address a12: 0073  
+Address a14: 03fa  
+Address a16: 6dc1  ASSIGN Vd = c1
+Address a18: e628  
+Address a1a: bbe7  GO TO V0 + be7
+Address a1c: 6803  ASSIGN V8 = 03
+Address a1e: e286  
+Address a20: 00bf  
+Address a22: f530  
+Address a24: 1a4c  GOTO a4c
+Address a26: 1807  GOTO 807
+Address a28: 0d3f  
+Address a2a: fe09  
+Address a2c: 0756  
+Address a2e: 04df  
+Address a30: c6f0  SET V6 = RANDOM & f0
+Address a32: c80d  SET V8 = RANDOM & 0d
+Address a34: a604  SET I = 604
+Address a36: 4bea  SKIP NEXT OP IF Vb != ea
+Address a38: 632c  ASSIGN V3 = 2c
+Address a3a: d80a  DRAW I at (V8, V0) with height a
+Address a3c: 00d6  
+Address a3e: 3016  SKIP NEXT OP IF V0 == 16
+Address a40: b47e  GO TO V0 + 47e
+Address a42: 8403  ASSIGN V4 ^= V0
+Address a44: 6bde  ASSIGN Vb = de
+Address a46: 80a6  SHIFT V0 right one bit
+Address a48: 1f50  GOTO f50
+Address a4a: 02d3  
+Address a4c: 73b4  ASSIGN V3 += b4
+Address a4e: 0171  
+Address a50: e300  
+Address a52: 5664  SKIP NEXT OP IF V6 == V6
+Address a54: 6d40  ASSIGN Vd = 40
+Address a56: d3e6  DRAW I at (V3, Ve) with height 6
+Address a58: 006b  
+Address a5a: 81b5  ASSIGN V1 -= Vb
+Address a5c: 642d  ASSIGN V4 = 2d
+Address a5e: e000  
+Address a60: 2bec  CALL bec
+Address a62: f2b6  
+Address a64: 8c61  ASSIGN Vc |= V6
+Address a66: 1cbf  GOTO cbf
+Address a68: 1b3c  GOTO b3c
+Address a6a: b106  GO TO V0 + 106
+Address a6c: 1c05  GOTO c05
+Address a6e: b711  GO TO V0 + 711
+Address a70: bec1  GO TO V0 + ec1
+Address a72: 8476  SHIFT V4 right one bit
+Address a74: 006a  
+Address a76: 6c84  ASSIGN Vc = 84
+Address a78: 7f0b  ASSIGN Vf += 0b
+Address a7a: a203  SET I = 203
+Address a7c: 3bd8  SKIP NEXT OP IF Vb == d8
+Address a7e: 17d6  GOTO 7d6
+Address a80: 6018  ASSIGN V0 = 18
+Address a82: 075b  
+Address a84: 1ee8  GOTO ee8
+Address a86: 9335  SKIP NEXT OP IF V3 != V3
+Address a88: 8c03  ASSIGN Vc ^= V0
+Address a8a: 5bf1  SKIP NEXT OP IF Vb == Vf
+Address a8c: 4a9f  SKIP NEXT OP IF Va != 9f
+Address a8e: b180  GO TO V0 + 180
+Address a90: 0356  
+Address a92: ac0f  SET I = c0f
+Address a94: be01  GO TO V0 + e01
+Address a96: 3900  SKIP NEXT OP IF V9 == 0
+Address a98: f382  
+Address a9a: 7d60  ASSIGN Vd += 60
+Address a9c: 672c  ASSIGN V7 = 2c
+Address a9e: 012e  
+Address aa0: d692  DRAW I at (V6, V9) with height 2
+Address aa2: b5bd  GO TO V0 + 5bd
+Address aa4: d001  DRAW I at (V0, V0) with height 1
+Address aa6: b72d  GO TO V0 + 72d
+Address aa8: c858  SET V8 = RANDOM & 58
+Address aaa: 622d  ASSIGN V2 = 2d
+Address aac: 000a  
+Address aae: 3f82  SKIP NEXT OP IF Vf == 82
+Address ab0: acc5  SET I = cc5
+Address ab2: 1c00  GOTO c00
+Address ab4: dc33  DRAW I at (Vc, V3) with height 3
+Address ab6: 206d  CALL 06d
+Address ab8: 6cc4  ASSIGN Vc = c4
+Address aba: 0156  
+Address abc: 58f1  SKIP NEXT OP IF V8 == Vf
+Address abe: fe3c  
+Address ac0: 0302  
+Address ac2: 4d50  SKIP NEXT OP IF Vd != 50
+Address ac4: 634f  ASSIGN V3 = 4f
+Address ac6: 3413  SKIP NEXT OP IF V4 == 13
+Address ac8: 0037  
+Address aca: cf90  SET Vf = RANDOM & 90
+Address acc: 58cd  SKIP NEXT OP IF V8 == Vc
+Address ace: 0401  
+Address ad0: 6f0d  ASSIGN Vf = 0d
+Address ad2: 71bf  ASSIGN V1 += bf
+Address ad4: 0c03  
+Address ad6: 1c3f  GOTO c3f
+Address ad8: 42ef  SKIP NEXT OP IF V2 != ef
+Address ada: a60d  SET I = 60d
+Address adc: 4801  SKIP NEXT OP IF V8 != 1
+Address ade: dcf3  DRAW I at (Vc, Vf) with height 3
+Address ae0: c980  SET V9 = RANDOM & 80
+Address ae2: dc38  DRAW I at (Vc, V3) with height 8
+Address ae4: 00ee  RETURN
+Address ae6: 4734  SKIP NEXT OP IF V7 != 34
+Address ae8: fe89  
+Address aea: 1d0a  GOTO d0a
+Address aec: f8c0  
+Address aee: 1f66  GOTO f66
+Address af0: 010e  
+Address af2: 00c7  
+Address af4: 1ffe  GOTO ffe
+Address af6: b062  GO TO V0 + 062
+Address af8: 2b00  CALL b00
+Address afa: bbbd  GO TO V0 + bbd
+Address afc: 8325  ASSIGN V3 -= V2
+Address afe: 0f74  
+Address b00: 00be  
+Address b02: 46cf  SKIP NEXT OP IF V6 != cf
+Address b04: 5983  SKIP NEXT OP IF V9 == V8
+Address b06: 2901  CALL 901
+Address b08: c703  SET V7 = RANDOM & 03
+Address b0a: 876d  
+Address b0c: 8725  ASSIGN V7 -= V2
+Address b0e: 00e6  
+Address b10: b0f7  GO TO V0 + 0f7
+Address b12: c179  SET V1 = RANDOM & 79
+Address b14: 0604  
+Address b16: ac61  SET I = c61
+Address b18: 73ec  ASSIGN V3 += ec
+Address b1a: 8b11  ASSIGN Vb |= V1
+Address b1c: 046d  
+Address b1e: 0c71  
+Address b20: 3b2f  SKIP NEXT OP IF Vb == 2f
+Address b22: ac00  SET I = c00
+Address b24: df19  DRAW I at (Vf, V1) with height 9
+Address b26: 9ee6  SKIP NEXT OP IF Ve != Ve
+Address b28: c02e  SET V0 = RANDOM & 2e
+Address b2a: 02ec  
+Address b2c: b2ff  GO TO V0 + 2ff
+Address b2e: 0f3e  
+Address b30: 000a  
+Address b32: f862  
+Address b34: 0eac  
+Address b36: 1fe0  GOTO fe0
+Address b38: 0056  
+Address b3a: dcff  DRAW I at (Vc, Vf) with height f
+Address b3c: a1b0  SET I = 1b0
+Address b3e: 1500  GOTO 500
+Address b40: 7f5e  ASSIGN Vf += 5e
+Address b42: d0e8  DRAW I at (V0, Ve) with height 8
+Address b44: 81e0  ASSIGN V1 = Ve
+Address b46: 00fc  
+Address b48: 6105  ASSIGN V1 = 05
+Address b4a: d3de  DRAW I at (V3, Vd) with height e
+Address b4c: d101  DRAW I at (V1, V0) with height 1
+Address b4e: 6641  ASSIGN V6 = 41
+Address b50: 7f23  ASSIGN Vf += 23
+Address b52: 9e25  SKIP NEXT OP IF Ve != V2
+Address b54: 00ed  
+Address b56: 7920  ASSIGN V9 += 20
+Address b58: e0ce  
+Address b5a: 7600  ASSIGN V6 += 00
+Address b5c: e96b  
+Address b5e: 6e3c  ASSIGN Ve = 3c
+Address b60: 525c  SKIP NEXT OP IF V2 == V5
+Address b62: 00bf  
+Address b64: 1b3d  GOTO b3d
+Address b66: b106  GO TO V0 + 106
+Address b68: 9c03  SKIP NEXT OP IF Vc != V0
+Address b6a: 3f0b  SKIP NEXT OP IF Vf == b
+Address b6c: 70d3  ASSIGN V0 += d3
+Address b6e: 78a4  ASSIGN V8 += a4
+Address b70: 03d6  
+Address b72: 8671  ASSIGN V6 |= V7
+Address b74: ac65  SET I = c65
+Address b76: 0c01  
+Address b78: bbe7  GO TO V0 + be7
+Address b7a: 6803  ASSIGN V8 = 03
+Address b7c: e2c6  
+Address b7e: 01eb  
+Address b80: 3786  SKIP NEXT OP IF V7 == 86
+Address b82: d83b  DRAW I at (V8, V3) with height b
+Address b84: 3838  SKIP NEXT OP IF V8 == 38
+Address b86: bf83  GO TO V0 + f83
+Address b88: 3df1  SKIP NEXT OP IF Vd == f1
+Address b8a: 044b  
+Address b8c: 044d  
+Address b8e: e13f  
+Address b90: e3c0  
+Address b92: 8a00  ASSIGN Va = V0
+Address b94: 67db  ASSIGN V7 = db
+Address b96: c15a  SET V1 = RANDOM & 5a
+Address b98: 1ee8  GOTO ee8
+Address b9a: 00dd  
+Address b9c: cf51  SET Vf = RANDOM & 51
+Address b9e: 9ac6  SKIP NEXT OP IF Va != Vc
+Address ba0: e900  
+Address ba2: dcb3  DRAW I at (Vc, Vb) with height 3
+Address ba4: e4f9  
+Address ba6: 00e1  
+Address ba8: 0037  
+Address baa: bfc0  GO TO V0 + fc0
+Address bac: 27c0  CALL 7c0
+Address bae: 7100  ASSIGN V1 += 00
+Address bb0: acc1  SET I = cc1
+Address bb2: bbf9  GO TO V0 + bf9
+Address bb4: 0f26  
+Address bb6: 14d3  GOTO 4d3
+Address bb8: c680  SET V6 = RANDOM & 80
+Address bba: 760f  ASSIGN V6 += 0f
+Address bbc: 5300  SKIP NEXT OP IF V3 == V0
+Address bbe: ce63  SET Ve = RANDOM & 63
+Address bc0: 13ac  GOTO 3ac
+Address bc2: b015  GO TO V0 + 015
+Address bc4: 00bd  
+Address bc6: 3d80  SKIP NEXT OP IF Vd == 80
+Address bc8: e05b  
+Address bca: 1000  GOTO 000
+Address bcc: b505  GO TO V0 + 505
+Address bce: 4fe3  SKIP NEXT OP IF Vf != e3
+Address bd0: b015  GO TO V0 + 015
+Address bd2: 00bf  
+Address bd4: a2a7  SET I = 2a7
+Address bd6: 713c  ASSIGN V1 += 3c
+Address bd8: 0b02  
+Address bda: 37bf  SKIP NEXT OP IF V7 == bf
+Address bdc: c007  SET V0 = RANDOM & 07
+Address bde: 0b50  
+Address be0: 00b7  
+Address be2: ff05  
+Address be4: a2c1  SET I = 2c1
+Address be6: 8402  ASSIGN V4 &= V0
+Address be8: ecc6  
+Address bea: 272c  CALL 72c
+Address bec: 6319  ASSIGN V3 = 19
+Address bee: 0733  
+Address bf0: c1be  SET V1 = RANDOM & be
+Address bf2: 21b9  CALL 1b9
+Address bf4: 2101  CALL 101
+Address bf6: b75f  GO TO V0 + 75f
+Address bf8: f032  
+Address bfa: 805d  
+Address bfc: 04b3  
+Address bfe: 1e59  GOTO e59
+Address c00: 03ca  
+Address c02: 8800  ASSIGN V8 = V0
+Address c04: 560f  SKIP NEXT OP IF V6 == V0
+Address c06: 2f28  CALL f28
+Address c08: 6c05  ASSIGN Vc = 05
+Address c0a: 00b6  
+Address c0c: 436b  SKIP NEXT OP IF V3 != 6b
+Address c0e: c86f  SET V8 = RANDOM & 6f
+Address c10: 0b10  
+Address c12: 376b  SKIP NEXT OP IF V7 == 6b
+Address c14: 081b  
+Address c16: a000  SET I = 00
+Address c18: 00cf  
+Address c1a: 02b4  
+Address c1c: 39de  SKIP NEXT OP IF V9 == de
+Address c1e: 1600  GOTO 600
+Address c20: d77f  DRAW I at (V7, V7) with height f
+Address c22: 4360  SKIP NEXT OP IF V3 != 60
+Address c24: 6b40  ASSIGN Vb = 40
+Address c26: 017e  
+Address c28: 1a3d  GOTO a3d
+Address c2a: d106  DRAW I at (V1, V0) with height 6
+Address c2c: a400  SET I = 400
+Address c2e: 4d0f  SKIP NEXT OP IF Vd != f
+Address c30: 4fe3  SKIP NEXT OP IF Vf != e3
+Address c32: c00a  SET V0 = RANDOM & 0a
+Address c34: 003b  
+Address c36: d817  DRAW I at (V8, V1) with height 7
+Address c38: 18d1  GOTO 8d1
+Address c3a: 7600  ASSIGN V6 += 00
+Address c3c: 6f87  ASSIGN Vf = 87
+Address c3e: a64d  SET I = 64d
+Address c40: 8005  ASSIGN V0 -= V0
+Address c42: 015b  
+Address c44: 313e  SKIP NEXT OP IF V1 == 3e
+Address c46: a6c0  SET I = 6c0
+Address c48: 1200  GOTO 200
+Address c4a: 6703  ASSIGN V7 = 03
+Address c4c: 3e66  SKIP NEXT OP IF Ve == 66
+Address c4e: 87ad  
+Address c50: 0876  
+Address c52: 1b43  GOTO b43
+Address c54: de0e  DRAW I at (Ve, V0) with height e
+Address c56: c610  SET V6 = RANDOM & 10
+Address c58: f901  
+Address c5a: 3eb0  SKIP NEXT OP IF Ve == b0
+Address c5c: 433b  SKIP NEXT OP IF V3 != 3b
+Address c5e: 0019  
+Address c60: 8be7  ASSIGN Vb = Ve - Vb
+Address c62: 13e0  GOTO 3e0
+Address c64: 3800  SKIP NEXT OP IF V8 == 0
+Address c66: ecf2  
+Address c68: b300  GO TO V0 + 300
+Address c6a: 9515  SKIP NEXT OP IF V5 != V1
+Address c6c: 0059  
+Address c6e: 431a  SKIP NEXT OP IF V3 != 1a
+Address c70: 331e  SKIP NEXT OP IF V3 == 1e
+Address c72: 2900  CALL 900
+Address c74: 9adf  SKIP NEXT OP IF Va != Vd
+Address c76: 8066  SHIFT V0 right one bit
+Address c78: 0d26  
+Address c7a: 1c56  GOTO c56
+Address c7c: 581f  SKIP NEXT OP IF V8 == V1
+Address c7e: 9c67  SKIP NEXT OP IF Vc != V6
+Address c80: 0900  
+Address c82: 3716  SKIP NEXT OP IF V7 == 16
+Address c84: b47d  GO TO V0 + 47d
+Address c86: 03a2  
+Address c88: 0003  
+Address c8a: eebf  
+Address c8c: 8d00  ASSIGN Vd = V0
+Address c8e: 4b00  SKIP NEXT OP IF Vb != 0
+Address c90: df30  DRAW I at (Vf, V3) with height 0
+Address c92: a269  SET I = 269
+Address c94: 3c52  SKIP NEXT OP IF Vc == 52
+Address c96: 0056  
+Address c98: af7f  SET I = f7f
+Address c9a: c2c1  SET V2 = RANDOM & c1
+Address c9c: 0604  
+Address c9e: 5658  SKIP NEXT OP IF V6 == V5
+Address ca0: b1ff  GO TO V0 + 1ff
+Address ca2: 8305  ASSIGN V3 -= V0
+Address ca4: 0176  
+Address ca6: 83f9  
+Address ca8: 180b  GOTO 80b
+Address caa: d601  DRAW I at (V6, V0) with height 1
+Address cac: df92  DRAW I at (Vf, V9) with height 2
+Address cae: a7d1  SET I = 7d1
+Address cb0: 80a6  SHIFT V0 right one bit
+Address cb2: 00bf  
+Address cb4: c29e  SET V2 = RANDOM & 9e
+Address cb6: d078  DRAW I at (V0, V7) with height 8
+Address cb8: 4401  SKIP NEXT OP IF V4 != 1
+Address cba: b501  GO TO V0 + 501
+Address cbc: 68ef  ASSIGN V8 = ef
+Address cbe: b005  GO TO V0 + 005
+Address cc0: 015b  
+Address cc2: f10a  ASSIGN V1 = get_key
+Address cc4: 32bf  SKIP NEXT OP IF V2 == bf
+Address cc6: e000  
+Address cc8: fc82  
+Address cca: 0956  
+Address ccc: af71  SET I = f71
+Address cce: 0058  
+Address cd0: 3f86  SKIP NEXT OP IF Vf == 86
+Address cd2: bcc2  GO TO V0 + cc2
+Address cd4: 1201  GOTO 201
+Address cd6: 2df1  CALL df1
+Address cd8: 3ee6  SKIP NEXT OP IF Ve == e6
+Address cda: c088  SET V0 = RANDOM & 88
+Address cdc: 00ec  
+Address cde: 6034  ASSIGN V0 = 34
+Address ce0: 1a6f  GOTO a6f
+Address ce2: c201  SET V2 = RANDOM & 01
+Address ce4: dcb3  DRAW I at (Vc, Vb) with height 3
+Address ce6: 8cb0  ASSIGN Vc = Vb
+Address ce8: 0571  
+Address cea: 0076  
+Address cec: 03b4  
+Address cee: 7d8f  ASSIGN Vd += 8f
+Address cf0: 111c  GOTO 11c
+Address cf2: 6bf1  ASSIGN Vb = f1
+Address cf4: 7c80  ASSIGN Vc += 80
+Address cf6: 601d  ASSIGN V0 = 1d
+Address cf8: 004d  
+Address cfa: f15e  
+Address cfc: 38c3  SKIP NEXT OP IF V8 == c3
+Address cfe: 8800  ASSIGN V8 = V0
+Address d00: 3c80  SKIP NEXT OP IF Vc == 80
+Address d02: f007  ASSIGn V0 = delay_timer
+Address d04: 0407  
+Address d06: 00bd  
+Address d08: 0704  
+Address d0a: 8005  ASSIGN V0 -= V0
+Address d0c: 0000  
+Address d0e: c733  SET V7 = RANDOM & 33
+Address d10: 24ef  CALL 4ef
+Address d12: 01e0  CLEAR_DISPLAY
+Address d14: 00df  
+Address d16: 0726  
+Address d18: 3486  SKIP NEXT OP IF V4 == 86
+Address d1a: 1c00  GOTO c00
+Address d1c: 7390  ASSIGN V3 += 90
+Address d1e: db34  DRAW I at (Vb, V3) with height 4
+Address d20: 1e39  GOTO e39
+Address d22: 00eb  
+Address d24: 8721  ASSIGN V7 |= V2
+Address d26: 8c8f  
+Address d28: 6108  ASSIGN V1 = 08
+Address d2a: b527  GO TO V0 + 527
+Address d2c: f860  
+Address d2e: 6c44  ASSIGN Vc = 44
+Address d30: 01bf  
+Address d32: f580  
+Address d34: 360d  SKIP NEXT OP IF V6 == d
+Address d36: b80e  GO TO V0 + 80e
+Address d38: fe36  
+Address d3a: 3cf2  SKIP NEXT OP IF Vc == f2
+Address d3c: 0d08  
+Address d3e: 0737  
+Address d40: de60  DRAW I at (Ve, V6) with height 0
+Address d42: 7a62  ASSIGN Va += 62
+Address d44: c105  SET V1 = RANDOM & 05
+Address d46: aef0  SET I = ef0
+Address d48: f065  LOAD memory starting at I into registers V0 to V0
+Address d4a: 7001  ASSIGN V0 += 01
+Address d4c: 8100  ASSIGN V1 = V0
+Address d4e: aef0  SET I = ef0
+Address d50: f065  LOAD memory starting at I into registers V0 to V0
+Address d52: 00ee  RETURN
+Address d54: 623b  ASSIGN V2 = 3b
+Address d56: 611a  ASSIGN V1 = 1a
+Address d58: a7ab  SET I = 7ab
+Address d5a: 6002  ASSIGN V0 = 02
+Address d5c: f015  ASSIGN delay_timer = V0
+Address d5e: d216  DRAW I at (V2, V1) with height 6
+Address d60: 23d4  CALL 3d4
+Address d62: 72fb  ASSIGN V2 += fb
+Address d64: 3227  SKIP NEXT OP IF V2 == 27
+Address d66: 1d5a  GOTO d5a
+Address d68: a862  SET I = 862
+Address d6a: d216  DRAW I at (V2, V1) with height 6
+Address d6c: 00ee  RETURN
+Address d6e: 8202  ASSIGN V2 &= V0
+Address d70: 0203  
+Address d72: 0040  
+Address d74: 84c4  ASSIGN V4 += Vc, possibly set carry flag
+Address d76: a4a0  SET I = 4a0
+Address d78: a064  SET I = 64
+Address d7a: a002  SET I = 02
+Address d7c: 4300  SKIP NEXT OP IF V3 != 0
+Address d7e: 4082  SKIP NEXT OP IF V0 != 82
+Address d80: 8200  ASSIGN V2 = V0
+Address d82: 8085  ASSIGN V0 -= V8
+Address d84: e590  
+Address d86: e084  
+Address d88: a0c0  SET I = c0
+Address d8a: a4a4  SET I = 4a4
+Address d8c: 4040  SKIP NEXT OP IF V0 != 40
+Address d8e: a4a0  SET I = 4a0
+Address d90: 4080  SKIP NEXT OP IF V0 != 80
+Address d92: 44a0  SKIP NEXT OP IF V4 != a0
+Address d94: 20c3  CALL 0c3
+Address d96: 8380  ASSIGN V3 = V8
+Address d98: 8043  ASSIGN V0 ^= V4
+Address d9a: 83c0  ASSIGN V3 = Vc
+Address d9c: 8044  ASSIGN V0 += V4, possibly set carry flag
+Address d9e: a080  SET I = 80
+Address da0: 6480  ASSIGN V4 = 80
+Address da2: 8065  ASSIGN V0 -= V6
+Address da4: 9090  SKIP NEXT OP IF V0 != V9
+Address da6: 6480  ASSIGN V4 = 80
+Address da8: 20c4  CALL 0c4
+Address daa: 20a0  CALL 0a0
+Address dac: 60e4  ASSIGN V0 = e4
+Address dae: 2080  CALL 080
+Address db0: e015  
+Address db2: 7590  ASSIGN V5 += 90
+Address db4: 7010  ASSIGN V0 += 10
+Address db6: f6a8  
+Address db8: aea8  SET I = ea8
+Address dba: 5050  SKIP NEXT OP IF V0 == V5
+Address dbc: adfa  SET I = dfa
+Address dbe: f81e  ASSIGN I += V8
+Address dc0: f565  LOAD memory starting at I into registers V0 to V5
+Address dc2: 7802  ASSIGN V8 += 02
+Address dc4: 6af8  ASSIGN Va = f8
+Address dc6: 6603  ASSIGN V6 = 03
+Address dc8: f615  ASSIGN delay_timer = V6
+Address dca: adfe  SET I = dfe
+Address dcc: f81e  ASSIGN I += V8
+Address dce: 7801  ASSIGN V8 += 01
+Address dd0: f065  LOAD memory starting at I into registers V0 to V0
+Address dd2: 800e  SHIFT V0 left one bit
+Address dd4: 86f0  ASSIGN V6 = Vf
+Address dd6: 8006  SHIFT V0 right one bit
+Address dd8: ad6e  SET I = d6e
+Address dda: f01e  ASSIGN I += V0
+Address ddc: f365  LOAD memory starting at I into registers V0 to V3
+Address dde: 4600  SKIP NEXT OP IF V6 != 0
+Address de0: 8600  ASSIGN V6 = V0
+Address de2: 80a2  ASSIGN V0 &= Va
+Address de4: 81a2  ASSIGN V1 &= Va
+Address de6: 82a2  ASSIGN V2 &= Va
+Address de8: 83a2  ASSIGN V3 &= Va
+Address dea: a208  SET I = 208
+Address dec: f355  DUMP registers from V0 to V3 starting at I
+Address dee: a208  SET I = 208
+Address df0: d454  DRAW I at (V4, V5) with height 4
+Address df2: 4601  SKIP NEXT OP IF V6 != 1
+Address df4: 00ee  RETURN
+Address df6: 8464  ASSIGN V4 += V6, possibly set carry flag
+Address df8: 8405  ASSIGN V4 -= V0
+Address dfa: 23d4  CALL 3d4
+Address dfc: 1dc6  GOTO dc6
+Address dfe: 2a1b  CALL a1b
+Address e00: 4a3b  SKIP NEXT OP IF Va != 3b
+Address e02: 122c  GOTO 22c
+Address e04: 0202  
+Address e06: 822d  
+Address e08: 1b07  GOTO b07
+Address e0a: 1232  GOTO 232
+Address e0c: 2f91  CALL f91
+Address e0e: 2d1b  CALL d1b
+Address e10: 3235  SKIP NEXT OP IF V2 == 35
+Address e12: 35a8  SKIP NEXT OP IF V5 == a8
+Address e14: 2d1b  CALL d1b
+Address e16: 162b  GOTO 62b
+Address e18: 2b2c  CALL b2c
+Address e1a: 912a  SKIP NEXT OP IF V1 != V2
+Address e1c: 1b27  GOTO b27
+Address e1e: 2f2c  CALL f2c
+Address e20: 2720  CALL 720
+Address e22: 8b2a  
+Address e24: 1b44  GOTO b44
+Address e26: 0812  
+Address e28: 2c8b  CALL c8b
+Address e2a: 301b  SKIP NEXT OP IF V0 == 1b
+Address e2c: 3599  SKIP NEXT OP IF V5 == 99
+Address e2e: 2d1b  CALL d1b
+Address e30: 2835  CALL 835
+Address e32: 3299  SKIP NEXT OP IF V2 == 99
+Address e34: 2c1b  CALL c1b
+Address e36: 153b  GOTO 53b
+Address e38: 3299  SKIP NEXT OP IF V2 == 99
+Address e3a: 0201  
+Address e3c: 3206  SKIP NEXT OP IF V2 == 6
+Address e3e: 3535  SKIP NEXT OP IF V5 == 35
+Address e40: 382f  SKIP NEXT OP IF V8 == 2f
+Address e42: 0115  
+Address e44: 353b  SKIP NEXT OP IF V5 == 3b
+Address e46: 2743  CALL 743
+Address e48: 382f  SKIP NEXT OP IF V8 == 2f
+Address e4a: ac01  SET I = c01
+Address e4c: 0a2c  
+Address e4e: 273b  CALL 73b
+Address e50: 2b2b  CALL b2b
+Address e52: 1232  GOTO 232
+Address e54: 010e  
+Address e56: 3b48  SKIP NEXT OP IF Vb == 48
+Address e58: 0116  
+Address e5a: 083f  
+Address e5c: 3f28  SKIP NEXT OP IF Vf == 28
+Address e5e: af0c  SET I = f0c
+Address e60: 1816  GOTO 816
+Address e62: 272f  CALL 72f
+Address e64: 3838  SKIP NEXT OP IF V8 == 38
+Address e66: 013b  
+Address e68: 0119  
+Address e6a: 2fa0  CALL fa0
+Address e6c: 0d03  
+Address e6e: 4a2f  SKIP NEXT OP IF Va != 2f
+Address e70: 2828  CALL 828
+Address e72: 0143  
+Address e74: 3507  SKIP NEXT OP IF V5 == 7
+Address e76: 2f91  CALL f91
+Address e78: 010a  
+Address e7a: 0807  
+Address e7c: 2835  CALL 835
+Address e7e: 3219  SKIP NEXT OP IF V2 == 19
+Address e80: 2f43  CALL f43
+Address e82: 0107  
+Address e84: 2f1d  CALL f1d
+Address e86: 2c01  CALL c01
+Address e88: 382f  SKIP NEXT OP IF V8 == 2f
+Address e8a: ac02  SET I = c02
+Address e8c: 1116  GOTO 116
+Address e8e: 3b38  SKIP NEXT OP IF Vb == 38
+Address e90: 384a  SKIP NEXT OP IF V8 == 4a
+Address e92: 3527  SKIP NEXT OP IF V5 == 27
+Address e94: 438d  SKIP NEXT OP IF V3 != 8d
+Address e96: 301b  SKIP NEXT OP IF V0 == 1b
+Address e98: 07b5  
+Address e9a: 1812  GOTO 812
+Address e9c: 1628  GOTO 628
+Address e9e: 3ba0  SKIP NEXT OP IF Vb == a0
+Address ea0: 1418  GOTO 418
+Address ea2: 0807  
+Address ea4: 2835  CALL 835
+Address ea6: 3299  SKIP NEXT OP IF V2 == 99
+Address ea8: 010a  
+Address eaa: 3527  SKIP NEXT OP IF V5 == 27
+Address eac: 1224  GOTO 224
+Address eae: 0d01  
+Address eb0: 0735  
+Address eb2: 1503  GOTO 503
+Address eb4: 2c06  CALL c06
+Address eb6: 1207  GOTO 207
+Address eb8: 192b  GOTO 92b
+Address eba: 0887  
+Address ebc: 0211  
+Address ebe: 2b35  CALL b35
+Address ec0: 2701  CALL 701
+Address ec2: 0032  
+Address ec4: 0612  
+Address ec6: 1600  GOTO 600
+Address ec8: 0115  
+Address eca: 2001  CALL 001
+Address ecc: 063b  
+Address ece: 1682  GOTO 682
+Address ed0: 00e0  CLEAR_DISPLAY
+Address ed2: 68aa  ASSIGN V8 = aa
+Address ed4: 2dbc  CALL dbc
+Address ed6: 23d0  CALL 3d0
+Address ed8: 2dbc  CALL dbc
+Address eda: 606e  ASSIGN V0 = 6e
+Address edc: 151b  GOTO 51b
+Address ede: 6013  ASSIGN V0 = 13
+Address ee0: 23d2  CALL 3d2
+Address ee2: 2dbc  CALL dbc
+Address ee4: a803  SET I = 803
+Address ee6: f365  LOAD memory starting at I into registers V0 to V3
+Address ee8: 800e  SHIFT V0 left one bit
+Address eea: 800e  SHIFT V0 left one bit
+Address eec: 8011  ASSIGN V0 |= V1
+Address eee: 833e  SHIFT V3 left one bit
+Address ef0: 833e  SHIFT V3 left one bit
+Address ef2: 8321  ASSIGN V3 |= V2
+Address ef4: 610a  ASSIGN V1 = 0a
+Address ef6: 6205  ASSIGN V2 = 05
+Address ef8: 8203  ASSIGN V2 ^= V0
+Address efa: 8133  ASSIGN V1 ^= V3
+Address efc: a208  SET I = 208
+Address efe: f355  DUMP registers from V0 to V3 starting at I
+Address f00: 632b  ASSIGN V3 = 2b
+Address f02: 6110  ASSIGN V1 = 10
+Address f04: 6200  ASSIGN V2 = 00
+Address f06: a208  SET I = 208
+Address f08: f21e  ASSIGN I += V2
+Address f0a: f065  LOAD memory starting at I into registers V0 to V0
+Address f0c: f029  ASSIGN I = sprite_address(V0)
+Address f0e: 6011  ASSIGN V0 = 11
+Address f10: 23d2  CALL 3d2
+Address f12: d315  DRAW I at (V3, V1) with height 5
+Address f14: 7305  ASSIGN V3 += 05
+Address f16: 7201  ASSIGN V2 += 01
+Address f18: 3204  SKIP NEXT OP IF V2 == 4
+Address f1a: 1f06  GOTO f06
+Address f1c: 00ee  RETURN
+Address f1e: a828  SET I = 828
+Address f20: 6010  ASSIGN V0 = 10
+Address f22: d016  DRAW I at (V0, V1) with height 6
+Address f24: 7008  ASSIGN V0 += 08
+Address f26: 3030  SKIP NEXT OP IF V0 == 30
+Address f28: 1f22  GOTO f22
+Address f2a: 00ee  RETURN
+Address f2c: 23d0  CALL 3d0
+Address f2e: 689c  ASSIGN V8 = 9c
+Address f30: 2dbc  CALL dbc
+Address f32: 2dbc  CALL dbc
+Address f34: 6111  ASSIGN V1 = 11
+Address f36: 2f1e  CALL f1e
+Address f38: f30a  ASSIGN V3 = get_key
+Address f3a: 4305  SKIP NEXT OP IF V3 != 5
+Address f3c: 1f48  GOTO f48
+Address f3e: 4308  SKIP NEXT OP IF V3 != 8
+Address f40: 1f54  GOTO f54
+Address f42: 430a  SKIP NEXT OP IF V3 != a
+Address f44: 1f60  GOTO f60
+Address f46: 1f38  GOTO f38
+Address f48: 4111  SKIP NEXT OP IF V1 != 11
+Address f4a: 1f38  GOTO f38
+Address f4c: 2f1e  CALL f1e
+Address f4e: 6111  ASSIGN V1 = 11
+Address f50: 2f1e  CALL f1e
+Address f52: 1f38  GOTO f38
+Address f54: 4117  SKIP NEXT OP IF V1 != 17
+Address f56: 1f38  GOTO f38
+Address f58: 2f1e  CALL f1e
+Address f5a: 6117  ASSIGN V1 = 17
+Address f5c: 2f1e  CALL f1e
+Address f5e: 1f38  GOTO f38
+Address f60: 6001  ASSIGN V0 = 01
+Address f62: f018  ASSIGN sound_timer = V0
+Address f64: 6205  ASSIGN V2 = 05
+Address f66: f215  ASSIGN delay_timer = V2
+Address f68: 2f1e  CALL f1e
+Address f6a: 73ff  ASSIGN V3 += ff
+Address f6c: 23d4  CALL 3d4
+Address f6e: 3300  SKIP NEXT OP IF V3 == 0
+Address f70: 1f66  GOTO f66
+Address f72: 4111  SKIP NEXT OP IF V1 != 11
+Address f74: 1559  GOTO 559
+Address f76: 00e0  CLEAR_DISPLAY
+Address f78: 6402  ASSIGN V4 = 02
+Address f7a: 650e  ASSIGN V5 = 0e
+Address f7c: 688d  ASSIGN V8 = 8d
+Address f7e: 2dc2  CALL dc2
+Address f80: aff5  SET I = ff5
+Address f82: f865  LOAD memory starting at I into registers V0 to V8
+Address f84: ad02  SET I = d02
+Address f86: d131  DRAW I at (V1, V3) with height 1
+Address f88: f00a  ASSIGN V0 = get_key
+Address f8a: a208  SET I = 208
+Address f8c: f71e  ASSIGN I += V7
+Address f8e: 7701  ASSIGN V7 += 01
+Address f90: f055  DUMP registers from V0 to V0 starting at I
+Address f92: ad02  SET I = d02
+Address f94: d131  DRAW I at (V1, V3) with height 1
+Address f96: f029  ASSIGN I = sprite_address(V0)
+Address f98: d125  DRAW I at (V1, V2) with height 5
+Address f9a: f618  ASSIGN sound_timer = V6
+Address f9c: 4704  SKIP NEXT OP IF V7 != 4
+Address f9e: 1fac  GOTO fac
+Address fa0: 7105  ASSIGN V1 += 05
+Address fa2: ad02  SET I = d02
+Address fa4: d131  DRAW I at (V1, V3) with height 1
+Address fa6: e0a1  SKIP NEXT OP IF V0 is not pressed
+Address fa8: 1fa6  GOTO fa6
+Address faa: 1f88  GOTO f88
+Address fac: 2d54  CALL d54
+Address fae: a208  SET I = 208
+Address fb0: f365  LOAD memory starting at I into registers V0 to V3
+Address fb2: 8143  ASSIGN V1 ^= V4
+Address fb4: 8253  ASSIGN V2 ^= V5
+Address fb6: 5200  SKIP NEXT OP IF V2 == V0
+Address fb8: 1fee  GOTO fee
+Address fba: 5130  SKIP NEXT OP IF V1 == V3
+Address fbc: 1fee  GOTO fee
+Address fbe: 8100  ASSIGN V1 = V0
+Address fc0: 8230  ASSIGN V2 = V3
+Address fc2: 8006  SHIFT V0 right one bit
+Address fc4: 8006  SHIFT V0 right one bit
+Address fc6: 8336  SHIFT V3 right one bit
+Address fc8: 8336  SHIFT V3 right one bit
+Address fca: 8162  ASSIGN V1 &= V6
+Address fcc: 8262  ASSIGN V2 &= V6
+Address fce: 4100  SKIP NEXT OP IF V1 != 0
+Address fd0: 1fd6  GOTO fd6
+Address fd2: 4000  SKIP NEXT OP IF V0 != 0
+Address fd4: 1fee  GOTO fee
+Address fd6: 4200  SKIP NEXT OP IF V2 != 0
+Address fd8: 1fde  GOTO fde
+Address fda: 4100  SKIP NEXT OP IF V1 != 0
+Address fdc: 1fee  GOTO fee
+Address fde: 4300  SKIP NEXT OP IF V3 != 0
+Address fe0: 1fe6  GOTO fe6
+Address fe2: 4200  SKIP NEXT OP IF V2 != 0
+Address fe4: 1fee  GOTO fee
+Address fe6: a803  SET I = 803
+Address fe8: f355  DUMP registers from V0 to V3 starting at I
+Address fea: 23c8  CALL 3c8
+Address fec: 1559  GOTO 559
+Address fee: f418  ASSIGN sound_timer = V4
+Address ff0: 2dbc  CALL dbc
+Address ff2: 23d0  CALL 3d0
+Address ff4: 151d  GOTO 51d
+Address ff6: 2b0d  CALL b0d
+Address ff8: 110a  GOTO 10a
+Address ffa: 0503  
+Address ffc: 0098  
+Address ffe: 0000  
+Address 1000: 0000  

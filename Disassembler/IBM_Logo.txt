@@ -1,145 +1,145 @@
-Line 0: 00e0  CLEAR_DISPLAY
-Line 1: a22a  SET I = 22a
-Line 2: 600c  ASSIGN V0 = 0c
-Line 3: 6108  ASSIGN V1 = 08
-Line 4: d01f  DRAW I at (V0, V1) with height f
-Line 5: 7009  ASSIGN V0 += 09
-Line 6: a239  SET I = 239
-Line 7: d01f  DRAW I at (V0, V1) with height f
-Line 8: a248  SET I = 248
-Line 9: 7008  ASSIGN V0 += 08
-Line 10: d01f  DRAW I at (V0, V1) with height f
-Line 11: 7004  ASSIGN V0 += 04
-Line 12: a257  SET I = 257
-Line 13: d01f  DRAW I at (V0, V1) with height f
-Line 14: 7008  ASSIGN V0 += 08
-Line 15: a266  SET I = 266
-Line 16: d01f  DRAW I at (V0, V1) with height f
-Line 17: 7008  ASSIGN V0 += 08
-Line 18: a275  SET I = 275
-Line 19: d01f  DRAW I at (V0, V1) with height f
-Line 20: 1228  GOTO 228
-Line 21: ff00  
-Line 22: ff00  
-Line 23: 3c00  SKIP NEXT OP IF Vc == 0
-Line 24: 3c00  SKIP NEXT OP IF Vc == 0
-Line 25: 3c00  SKIP NEXT OP IF Vc == 0
-Line 26: 3c00  SKIP NEXT OP IF Vc == 0
-Line 27: ff00  
-Line 28: ffff  
-Line 29: 00ff  
-Line 30: 0038  
-Line 31: 003f  
-Line 32: 003f  
-Line 33: 0038  
-Line 34: 00ff  
-Line 35: 00ff  
-Line 36: 8000  ASSIGN V0 = V0
-Line 37: e000  
-Line 38: e000  
-Line 39: 8000  ASSIGN V0 = V0
-Line 40: 8000  ASSIGN V0 = V0
-Line 41: e000  
-Line 42: e000  
-Line 43: 80f8  
-Line 44: 00fc  
-Line 45: 003e  
-Line 46: 003f  
-Line 47: 003b  
-Line 48: 0039  
-Line 49: 00f8  
-Line 50: 00f8  
-Line 51: 0300  
-Line 52: 0700  
-Line 53: 0f00  
-Line 54: bf00  GO TO V0 + f00
-Line 55: fb00  
-Line 56: f300  
-Line 57: e300  
-Line 58: 43e0  SKIP NEXT OP IF V3 != e0
-Line 59: 00e0  CLEAR_DISPLAY
-Line 60: 0080  
-Line 61: 0080  
-Line 62: 0080  
-Line 63: 0080  
-Line 64: 00e0  CLEAR_DISPLAY
-Line 65: 00e0  CLEAR_DISPLAY
-Line 66: 0000  
-Line 67: 0000  
-Line 68: 0000  
-Line 69: 0000  
-Line 70: 0000  
-Line 71: 0000  
-Line 72: 0000  
-Line 73: 0000  
-Line 74: 0000  
-Line 75: 0000  
-Line 76: 0000  
-Line 77: 0000  
-Line 78: 0000  
-Line 79: 0000  
-Line 80: 0000  
-Line 81: 0000  
-Line 82: 0000  
-Line 83: 0000  
-Line 84: 0000  
-Line 85: 0000  
-Line 86: 0000  
-Line 87: 0000  
-Line 88: 0000  
-Line 89: 0000  
-Line 90: 0000  
-Line 91: 0000  
-Line 92: 0000  
-Line 93: 0000  
-Line 94: 0000  
-Line 95: 0000  
-Line 96: 0000  
-Line 97: 0000  
-Line 98: 0000  
-Line 99: 0000  
-Line 100: 0000  
-Line 101: 0000  
-Line 102: 0000  
-Line 103: 0000  
-Line 104: 0000  
-Line 105: 0000  
-Line 106: 0000  
-Line 107: 0000  
-Line 108: 0000  
-Line 109: 0000  
-Line 110: 0000  
-Line 111: 0000  
-Line 112: 0000  
-Line 113: 0000  
-Line 114: 0000  
-Line 115: 0000  
-Line 116: 0000  
-Line 117: 0000  
-Line 118: 0000  
-Line 119: 0000  
-Line 120: 0000  
-Line 121: 0000  
-Line 122: 0000  
-Line 123: 0000  
-Line 124: 0000  
-Line 125: 0000  
-Line 126: 0000  
-Line 127: 0000  
-Line 128: 0000  
-Line 129: 0000  
-Line 130: 0000  
-Line 131: 0000  
-Line 132: 0000  
-Line 133: 0000  
-Line 134: 0000  
-Line 135: 0000  
-Line 136: 0000  
-Line 137: 0000  
-Line 138: 0000  
-Line 139: 0000  
-Line 140: 0000  
-Line 141: 0000  
-Line 142: 0000  
-Line 143: 0000  
-Line 144: 0000  
+Address 200: 00e0  CLEAR_DISPLAY
+Address 202: a22a  SET I = 22a
+Address 204: 600c  ASSIGN V0 = 0c
+Address 206: 6108  ASSIGN V1 = 08
+Address 208: d01f  DRAW I at (V0, V1) with height f
+Address 20a: 7009  ASSIGN V0 += 09
+Address 20c: a239  SET I = 239
+Address 20e: d01f  DRAW I at (V0, V1) with height f
+Address 210: a248  SET I = 248
+Address 212: 7008  ASSIGN V0 += 08
+Address 214: d01f  DRAW I at (V0, V1) with height f
+Address 216: 7004  ASSIGN V0 += 04
+Address 218: a257  SET I = 257
+Address 21a: d01f  DRAW I at (V0, V1) with height f
+Address 21c: 7008  ASSIGN V0 += 08
+Address 21e: a266  SET I = 266
+Address 220: d01f  DRAW I at (V0, V1) with height f
+Address 222: 7008  ASSIGN V0 += 08
+Address 224: a275  SET I = 275
+Address 226: d01f  DRAW I at (V0, V1) with height f
+Address 228: 1228  GOTO 228
+Address 22a: ff00  
+Address 22c: ff00  
+Address 22e: 3c00  SKIP NEXT OP IF Vc == 0
+Address 230: 3c00  SKIP NEXT OP IF Vc == 0
+Address 232: 3c00  SKIP NEXT OP IF Vc == 0
+Address 234: 3c00  SKIP NEXT OP IF Vc == 0
+Address 236: ff00  
+Address 238: ffff  
+Address 23a: 00ff  
+Address 23c: 0038  
+Address 23e: 003f  
+Address 240: 003f  
+Address 242: 0038  
+Address 244: 00ff  
+Address 246: 00ff  
+Address 248: 8000  ASSIGN V0 = V0
+Address 24a: e000  
+Address 24c: e000  
+Address 24e: 8000  ASSIGN V0 = V0
+Address 250: 8000  ASSIGN V0 = V0
+Address 252: e000  
+Address 254: e000  
+Address 256: 80f8  
+Address 258: 00fc  
+Address 25a: 003e  
+Address 25c: 003f  
+Address 25e: 003b  
+Address 260: 0039  
+Address 262: 00f8  
+Address 264: 00f8  
+Address 266: 0300  
+Address 268: 0700  
+Address 26a: 0f00  
+Address 26c: bf00  GO TO V0 + f00
+Address 26e: fb00  
+Address 270: f300  
+Address 272: e300  
+Address 274: 43e0  SKIP NEXT OP IF V3 != e0
+Address 276: 00e0  CLEAR_DISPLAY
+Address 278: 0080  
+Address 27a: 0080  
+Address 27c: 0080  
+Address 27e: 0080  
+Address 280: 00e0  CLEAR_DISPLAY
+Address 282: 00e0  CLEAR_DISPLAY
+Address 284: 0000  
+Address 286: 0000  
+Address 288: 0000  
+Address 28a: 0000  
+Address 28c: 0000  
+Address 28e: 0000  
+Address 290: 0000  
+Address 292: 0000  
+Address 294: 0000  
+Address 296: 0000  
+Address 298: 0000  
+Address 29a: 0000  
+Address 29c: 0000  
+Address 29e: 0000  
+Address 2a0: 0000  
+Address 2a2: 0000  
+Address 2a4: 0000  
+Address 2a6: 0000  
+Address 2a8: 0000  
+Address 2aa: 0000  
+Address 2ac: 0000  
+Address 2ae: 0000  
+Address 2b0: 0000  
+Address 2b2: 0000  
+Address 2b4: 0000  
+Address 2b6: 0000  
+Address 2b8: 0000  
+Address 2ba: 0000  
+Address 2bc: 0000  
+Address 2be: 0000  
+Address 2c0: 0000  
+Address 2c2: 0000  
+Address 2c4: 0000  
+Address 2c6: 0000  
+Address 2c8: 0000  
+Address 2ca: 0000  
+Address 2cc: 0000  
+Address 2ce: 0000  
+Address 2d0: 0000  
+Address 2d2: 0000  
+Address 2d4: 0000  
+Address 2d6: 0000  
+Address 2d8: 0000  
+Address 2da: 0000  
+Address 2dc: 0000  
+Address 2de: 0000  
+Address 2e0: 0000  
+Address 2e2: 0000  
+Address 2e4: 0000  
+Address 2e6: 0000  
+Address 2e8: 0000  
+Address 2ea: 0000  
+Address 2ec: 0000  
+Address 2ee: 0000  
+Address 2f0: 0000  
+Address 2f2: 0000  
+Address 2f4: 0000  
+Address 2f6: 0000  
+Address 2f8: 0000  
+Address 2fa: 0000  
+Address 2fc: 0000  
+Address 2fe: 0000  
+Address 300: 0000  
+Address 302: 0000  
+Address 304: 0000  
+Address 306: 0000  
+Address 308: 0000  
+Address 30a: 0000  
+Address 30c: 0000  
+Address 30e: 0000  
+Address 310: 0000  
+Address 312: 0000  
+Address 314: 0000  
+Address 316: 0000  
+Address 318: 0000  
+Address 31a: 0000  
+Address 31c: 0000  
+Address 31e: 0000  
+Address 320: 0000  

@@ -1,0 +1,145 @@
+Address 200: 00e0  CLEAR_DISPLAY
+Address 202: 2214  CALL 214
+Address 204: 221a  CALL 21a
+Address 206: 221a  CALL 21a
+Address 208: 2220  CALL 220
+Address 20a: 221a  CALL 21a
+Address 20c: 6001  ASSIGN V0 = 01
+Address 20e: f015  ASSIGN delay_timer = V0
+Address 210: 2242  CALL 242
+Address 212: 1206  GOTO 206
+Address 214: 6320  ASSIGN V3 = 20
+Address 216: 6419  ASSIGN V4 = 19
+Address 218: 00ee  RETURN
+Address 21a: a24a  SET I = 24a
+Address 21c: d346  DRAW I at (V3, V4) with height 6
+Address 21e: 00ee  RETURN
+Address 220: 6008  ASSIGN V0 = 08
+Address 222: e09e  SKIP NEXT OP IF V0 is pressed
+Address 224: 1228  GOTO 228
+Address 226: 7401  ASSIGN V4 += 01
+Address 228: 6002  ASSIGN V0 = 02
+Address 22a: e09e  SKIP NEXT OP IF V0 is pressed
+Address 22c: 1230  GOTO 230
+Address 22e: 74ff  ASSIGN V4 += ff
+Address 230: 6004  ASSIGN V0 = 04
+Address 232: e09e  SKIP NEXT OP IF V0 is pressed
+Address 234: 1238  GOTO 238
+Address 236: 73ff  ASSIGN V3 += ff
+Address 238: 6006  ASSIGN V0 = 06
+Address 23a: e09e  SKIP NEXT OP IF V0 is pressed
+Address 23c: 1240  GOTO 240
+Address 23e: 7301  ASSIGN V3 += 01
+Address 240: 00ee  RETURN
+Address 242: f007  ASSIGn V0 = delay_timer
+Address 244: 3000  SKIP NEXT OP IF V0 == 0
+Address 246: 1242  GOTO 242
+Address 248: 00ee  RETURN
+Address 24a: 3c18  SKIP NEXT OP IF Vc == 18
+Address 24c: ff18  ASSIGN sound_timer = Vf
+Address 24e: 24e7  CALL 4e7
+Address 250: 7eff  ASSIGN Ve += ff
+Address 252: 99e7  SKIP NEXT OP IF V9 != Ve
+Address 254: 3c00  SKIP NEXT OP IF Vc == 0
+Address 256: 0000  
+Address 258: 0000  
+Address 25a: 0000  
+Address 25c: 0000  
+Address 25e: 0000  
+Address 260: 0000  
+Address 262: 0000  
+Address 264: 0000  
+Address 266: 0000  
+Address 268: 0000  
+Address 26a: 0000  
+Address 26c: 0000  
+Address 26e: 0000  
+Address 270: 0000  
+Address 272: 0000  
+Address 274: 0000  
+Address 276: 0000  
+Address 278: 0000  
+Address 27a: 0000  
+Address 27c: 0000  
+Address 27e: 0000  
+Address 280: 0000  
+Address 282: 0000  
+Address 284: 0000  
+Address 286: 0000  
+Address 288: 0000  
+Address 28a: 0000  
+Address 28c: 0000  
+Address 28e: 0000  
+Address 290: 0000  
+Address 292: 0000  
+Address 294: 0000  
+Address 296: 0000  
+Address 298: 0000  
+Address 29a: 0000  
+Address 29c: 0000  
+Address 29e: 0000  
+Address 2a0: 0000  
+Address 2a2: 0000  
+Address 2a4: 0000  
+Address 2a6: 0000  
+Address 2a8: 0000  
+Address 2aa: 0000  
+Address 2ac: 0000  
+Address 2ae: 0000  
+Address 2b0: 0000  
+Address 2b2: 0000  
+Address 2b4: 0000  
+Address 2b6: 0000  
+Address 2b8: 0000  
+Address 2ba: 0000  
+Address 2bc: 0000  
+Address 2be: 0000  
+Address 2c0: 0000  
+Address 2c2: 0000  
+Address 2c4: 0000  
+Address 2c6: 0000  
+Address 2c8: 0000  
+Address 2ca: 0000  
+Address 2cc: 0000  
+Address 2ce: 0000  
+Address 2d0: 0000  
+Address 2d2: 0000  
+Address 2d4: 0000  
+Address 2d6: 0000  
+Address 2d8: 0000  
+Address 2da: 0000  
+Address 2dc: 0000  
+Address 2de: 0000  
+Address 2e0: 0000  
+Address 2e2: 0000  
+Address 2e4: 0000  
+Address 2e6: 0000  
+Address 2e8: 0000  
+Address 2ea: 0000  
+Address 2ec: 0000  
+Address 2ee: 0000  
+Address 2f0: 0000  
+Address 2f2: 0000  
+Address 2f4: 0000  
+Address 2f6: 0000  
+Address 2f8: 0000  
+Address 2fa: 0000  
+Address 2fc: 0000  
+Address 2fe: 0000  
+Address 300: 0000  
+Address 302: 0000  
+Address 304: 0000  
+Address 306: 0000  
+Address 308: 0000  
+Address 30a: 0000  
+Address 30c: 0000  
+Address 30e: 0000  
+Address 310: 0000  
+Address 312: 0000  
+Address 314: 0000  
+Address 316: 0000  
+Address 318: 0000  
+Address 31a: 0000  
+Address 31c: 0000  
+Address 31e: 0000  
+Address 320: 0000  

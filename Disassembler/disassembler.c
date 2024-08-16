@@ -15,13 +15,13 @@ int main(int argc, char *argv[]){
     }
     
     // Create an array of chars for opcodes
-    char *opcodes = malloc(sizeof(char) * 290);
+    char *opcodes = malloc(sizeof(char) * 3584);
 
     // Read in opcodes
-    read(binary_rom, opcodes, 290);
+    read(binary_rom, opcodes, 3584);
 
     // Iterate through all opcodes
-    for(int i = 0; i < 290; i+= 2){
+    for(int i = 0; i <= 3584; i+= 2){
         
         // Print
         printf("Address %x: %02hhx%02hhx  ", i + 512 , opcodes[i], opcodes[i+1]);
