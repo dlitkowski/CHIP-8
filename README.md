@@ -7,6 +7,4 @@ Many thanks to Wikipedia for information on CHIP-8, and thanks to @kripod for hi
 
 TODO: 
 
-Test keyboard functionality.
-
-Test more ROMs, add threading so the delay and sound timers count down at 60hz and the screen is not unnecessarily updated. 
+Add audio, test more ROMs, and add threading for the delay/sound timers and display refresh. 
