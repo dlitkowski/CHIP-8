@@ -1,12 +1,10 @@
 #include <stdio.h>
-#include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include "audiovisual.h"
 #include <time.h>
 
 #include <SDL2/SDL.h>
-
 
 
 // Simple function to get the font sprite's location in memory
@@ -67,9 +65,9 @@ int main(int args, char* argv[]){
     // int* is_running = 1;
 
     // If no arguments are given, print an error and return.
-    if (args = 0) {
+    if (args == 0) {
         printf("ERROR: No arguments given.\n");
-        return 0;
+        return -1;
     }
 
     // Initialize virtual CPU components and memory.
@@ -464,6 +462,7 @@ int main(int args, char* argv[]){
         //Print newline, move to next instruction
         pc+= 2;
         SDL_Delay(1);
+
 
         // Decrement delay and sound timers
         // NOTE: these will be moved to a 60hz thread eventually

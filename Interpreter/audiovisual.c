@@ -35,11 +35,15 @@ int clear_display(){
 int update_state(unsigned char* keys){
 
     // Send all events to the queue.
-    // SDL_PumpEvents();
+    SDL_PumpEvents();
 
     // If a quit request has been made, return -1, otherwise
     // update keyboard state and return 0.
-    // SDL_bool quit = SDL_HasEvent(SDL_QUIT);
+    SDL_bool quit = SDL_HasEvent(SDL_QUIT);
+
+    if(SDL_TRUE == quit){
+        return 1;
+    }
 
     // Get the current state of all keyboard presses, then create an array to
     // parallel keys for checking SDL_keys
@@ -178,8 +182,6 @@ void update_display(){
 
 
 
-
-
 // Wait for a keypress, then return the first key pressed
 int key_wait(){
 
@@ -187,6 +189,7 @@ int key_wait(){
 
         // Get the current state of all keyboard presses, then create an array to
         // parallel keys for checking SDL_keys
+        SDL_PumpEvents();
         const unsigned char* SDL_keys = SDL_GetKeyboardState(NULL);
 
         // Iterate through the 16 keys, if one is pushed then return it
