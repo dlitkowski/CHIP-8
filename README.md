@@ -1,5 +1,5 @@
 # CHIP-8   || IN PROGRESS ||
-Disassembler and interpreter (emulator?) for the CHIP-8 language, written in C and using the SDL2 library for video, audio, and input. 
+Disassembler and interpreter (emulator?) for the CHIP-8 language, written in C and using the SDL2 library for video and input, as well as SDL Mixer for audio. The emulater has only been tested on Linux, and will be exclusive to POSIX systems as a result of pthreads use.  
 
 The *Disassembler* directory features a program to dump a CHIP-8 binary ROM into assembly language, with descriptions of each command. The *ROMs* directory features binaries to run in the interpreter, and the *Interprer* directory contains the full CHIP 8 implementation. 
 
