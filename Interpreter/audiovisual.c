@@ -11,6 +11,29 @@ const unsigned char SDL_keynames[16] = {SDL_SCANCODE_X, SDL_SCANCODE_1, SDL_SCAN
                     SDL_SCANCODE_C, SDL_SCANCODE_4, SDL_SCANCODE_R, SDL_SCANCODE_F,
                     SDL_SCANCODE_V};
 
+// Iterate through the display and show
+void update_display(){
+
+    for(int x = 0; x < 64; x++){
+        for(int y = 0; y < 34; y++){
+
+            // If the pixel is set, draw white, if not draw black
+            if(display[x + y * 64]){
+
+                SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+                SDL_RenderDrawPoint(renderer, x, y);
+
+            } else {
+
+                SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+                SDL_RenderDrawPoint(renderer, x, y);
+
+            }
+        }
+    }
+
+    SDL_RenderPresent(renderer);
+}
 
 
 // Clear the display, setting all pixels to 0
@@ -97,7 +120,7 @@ int init_sdl(){
     for(int i = 0; i < 64; i++){
         SDL_Delay(32);
         SDL_RenderDrawLine(renderer, i, 0, i, 32);
-        SDL_RenderPresent(renderer);
+        update_display();
     }
 
     SDL_Delay(1000);
@@ -111,7 +134,11 @@ int init_sdl(){
 // Draw the given sprite of the given height at the given location
 int draw_sprite(char* sprite, int height, int x, int y){
 
-    // Int to record if any pixels are flipped from on to off
+    // Wrap out of bounds locations
+    x = x % 64;
+    y = y % 32;
+
+    // Record if any pixels are flipped from on to off
     int flipped = 0;
 
     printf("Draw sprite of height %d at (%d, %d)\n", height, x, y);
@@ -123,7 +150,7 @@ int draw_sprite(char* sprite, int height, int x, int y){
             // Extract the corresponding pixel on the display.
             char* pixel = display + (y + i) * 64 + x + 7 - j;
 
-            // Check if the sprite bit is set. If so, flip the corresponding display char
+            // Check if the sprite bit is set
             if ((*(sprite + i) >> j) & 0b1) {
 
                 // Skip the pixel if it's off the screen
@@ -156,32 +183,6 @@ int draw_sprite(char* sprite, int height, int x, int y){
 
 
 
-// Iterate through the display and show
-void update_display(){
-
-    for(int x = 0; x < 64; x++){
-        for(int y = 0; y < 34; y++){
-
-            // If the pixel is set, draw white, if not draw black
-            if(display[x + y * 64]){
-
-                SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-                SDL_RenderDrawPoint(renderer, x, y);
-
-            } else {
-
-                SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-                SDL_RenderDrawPoint(renderer, x, y);
-
-            }
-        }
-    }
-
-    SDL_RenderPresent(renderer);
-}
-
-
-
 // Wait for a keypress, then return the first key pressed
 int key_wait(){
 
@@ -191,6 +192,13 @@ int key_wait(){
         // parallel keys for checking SDL_keys
         SDL_PumpEvents();
         const unsigned char* SDL_keys = SDL_GetKeyboardState(NULL);
+
+        // Check for a quit request
+        SDL_bool quit = SDL_HasEvent(SDL_QUIT);
+
+        if(SDL_TRUE == quit){
+            return 1;
+        }
 
         // Iterate through the 16 keys, if one is pushed then return it
         for(int i = 0; i < 16; i++){
@@ -211,4 +219,5 @@ int quit_sdl(){
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
+    printf("Quitting SDL.\n");
 }

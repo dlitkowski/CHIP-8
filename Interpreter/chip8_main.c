@@ -78,7 +78,7 @@ int main(int args, char* argv[]){
     unsigned char registers[16];
     unsigned short pointer;
     unsigned short pc = 512;
-    unsigned short stack[16];
+    unsigned short stack[64];
     unsigned char sp = 0;
     unsigned int delay_timer = 0;
     unsigned int sound_timer = 0;
@@ -138,7 +138,6 @@ int main(int args, char* argv[]){
 
         if(quit){
             printf("Quit request received, aborting.\n");
-            SDL_Quit();
             break;
         }
 
@@ -168,8 +167,8 @@ int main(int args, char* argv[]){
                 } else if(op_xxNN == 0xEE){
 
                     // Pop the return address from the stack
-                    pc = stack[sp];
                     sp--;
+                    pc = stack[sp];
 
                 }
 
@@ -187,10 +186,9 @@ int main(int args, char* argv[]){
 
                 // Set pc to the subroutine's previous address
                 // and push the next address after returning to the stack
-                sp++;
                 stack[sp] = pc;
+                sp++;
                 pc = op_xNNN - 2;
-
                 break;
 
             // SKIP OP IF reg_X == xxNN
@@ -264,46 +262,60 @@ int main(int args, char* argv[]){
                     // ADD reg_Y to reg_X, set carry flag in the case of an overflow
                     case 4:
 
-                        if (registers[reg_X] < registers[reg_Y] + registers[reg_X]){
-                            registers[0xF] = 1;
+                        int overflow = 0;
+
+                        if (registers[reg_Y] + registers[reg_X] > 255){
+                            overflow = 1;
                         } else {
-                            registers[0xF] = 0;
+                            overflow = 0;
                         }
 
                         registers[reg_X] += registers[reg_Y];
-
+                        registers[0xF] = overflow;
                         break;
 
                     // SUBTRACT reg_Y from reg_X, set carry flag in the case of an underflow
                     case 5:
 
+                        int underflow = 0;
+
                         if (registers[reg_X] < registers[reg_Y]){
-                            registers[0xF] = 0;
+                            underflow = 0;
                         } else {
-                            registers[0xF] = 1;
+                            underflow = 1;
                         }
 
                         registers[reg_X] -= registers[reg_Y];
+                        registers[0xF] = underflow;
                         break;
 
                     // SHIFT reg_X right one bit, store the shifted bit in reg_F
                     case 6:
 
-                        registers[0xF] = 0b1 & registers[reg_X];
+                        int right_set = 0b1 & registers[reg_X];
                         registers[reg_X] = registers[reg_X] >> 1;
+                        registers[0xF] = right_set;
                         break;
 
                     // SUBTRACT reg_X from reg_Y, store in reg_X
                     case 7:
 
+                        if (registers[reg_Y] < registers[reg_X]){
+                            underflow = 0;
+                        } else {
+                            underflow = 1;
+                        }
+
                         registers[reg_X] = registers[reg_Y] - registers[reg_X];
+                        registers[0xF] = underflow;
                         break;
 
                     // SHIFT reg_X left one bit, store the shifted bit in reg_F
                     case 0xE:
 
-                        registers[0xF] = 0b10000000 & registers[reg_X];
+                        int left_set = 0b10000000 & registers[reg_X];
                         registers[reg_X] = registers[reg_X] << 1;
+                        registers[0xF] = left_set ? 1 : 0;
                         break;
 
                 }
@@ -444,6 +456,8 @@ int main(int args, char* argv[]){
                             memory[pointer + i] = registers[i];
                         }
 
+                        pointer += reg_X + 1;
+
                         break;
 
                     // LOAD memory starting at pointer into registers reg_0 to reg_X
@@ -452,6 +466,8 @@ int main(int args, char* argv[]){
                         for(int i = 0; i <= reg_X; i++){
                             registers[i] = memory[pointer + i];
                         }
+
+                        pointer += reg_X + 1;
 
                         break;
                 }
