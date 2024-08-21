@@ -3,9 +3,14 @@
 #include <unistd.h>
 #include "audiovisual.h"
 #include <time.h>
+#include <pthread.h>
 
 #include <SDL2/SDL.h>
 
+pthread_mutex_t thread_lock;
+
+// Int to track the running state of the main loop
+int running = 1;
 
 // Simple function to get the font sprite's location in memory
 // for all hex digits. Returns 80 on failure, which will be a
@@ -36,6 +41,64 @@ int font_get(char number){
 
 
 
+// Struct to pass to the 60hz thread
+typedef struct {
+    unsigned int* delay;
+    unsigned int* sound;
+    char* keys;
+} refresh_data;
+
+// Loop for a second thread to execute at 60hz
+// Includes all SDL functionality.
+void* refresh_thread (void* thread_args){
+
+    refresh_data* refresh = (refresh_data*) thread_args;
+
+    // Attempt to initialize SDL, abort on failure.
+    int init = init_sdl();
+
+    if(init != 0){
+        printf("ERROR: failed to initialize SDL, aborting.\n");
+        quit_sdl();
+        return NULL;
+    }
+
+    // Main loop to decrement delay and sound timers and scan input
+    while(1){
+
+        pthread_mutex_lock(&thread_lock);
+
+        if(*refresh->delay > 0){
+            (*refresh->delay)--;
+        }
+
+        if(*refresh->sound > 0){
+            beep();
+            (*refresh->sound)--;
+        }
+
+        pthread_mutex_unlock(&thread_lock);
+
+        // Update keyboard and check for a quit, exit the loop in case
+        // of a quit
+        int quit = update_state(refresh->keys);
+
+        if(quit) {
+            break;
+        }
+
+        update_display(&thread_lock);
+        SDL_Delay(16);
+    }
+
+    quit_sdl();
+    running = 0;
+    return NULL;
+
+}
+
+
+
 // Function to load a ROM into the given memory chunk.
 // If the file doesn't load return 1.
 // If the file is too big for CHIP-8's memory, return 2.
@@ -61,8 +124,6 @@ int load(unsigned char* memory, unsigned char* filename){
 
 int main(int args, char* argv[]){
 
-    // Boolean to run the main CPU loop
-    // int* is_running = 1;
 
     // If no arguments are given, print an error and return.
     if (args == 0) {
@@ -114,14 +175,16 @@ int main(int args, char* argv[]){
         return -1;
     }
 
-    // Attempt to initialize SDL, abort on failure.
-    int init = init_sdl();
+    // Create a secondary thread to run 60hz functionality
+    pthread_t thread;
+    refresh_data* thread_args = malloc(sizeof(refresh_data));
+    thread_args->delay = &delay_timer;
+    thread_args->sound = &sound_timer;
+    thread_args->keys = keys;
 
-    if(init != 0){
-        printf("ERROR: failed to initialize SDL, aborting.\n");
-        quit_sdl();
-        return -1;
-    }
+    pthread_mutex_init(&thread_lock, NULL);
+
+    pthread_create(&thread, NULL, &refresh_thread, (void *) thread_args);
 
     // Pass the current time as a seed for random functionality
     srand(time(NULL));
@@ -132,11 +195,7 @@ int main(int args, char* argv[]){
     // xxxN, xxNN, and xNNN, respectively, and one of these numbers will have bearing on all commands.
     while(1){
 
-        // Update the state of the emulator. Update key presses, and
-        // in the case that a quit request is made, exit the program.
-        int quit = update_state(keys);
-
-        if(quit){
+        if(!running){
             printf("Quit request received, aborting.\n");
             break;
         }
@@ -161,7 +220,7 @@ int main(int args, char* argv[]){
 
                 // CLEAR DISPLAY
                 if(op_xxNN == 0xE0){
-                    clear_display();
+                    clear_display(&thread_lock);
 
                 // RETURN FROM SUBROUTINE
                 } else if(op_xxNN == 0xEE){
@@ -359,7 +418,8 @@ int main(int args, char* argv[]){
                     return 1;
                 }
 
-                int flipped = draw_sprite(memory + pointer, op_xxxN, registers[reg_X], registers[reg_Y]);
+                int flipped = draw_sprite(memory + pointer, op_xxxN, registers[reg_X], registers[reg_Y],
+                                          &thread_lock);
 
                 // If the sprite flipped a preset pixel, set reg_F to 1
                 if(flipped) {
@@ -378,18 +438,12 @@ int main(int args, char* argv[]){
 
                     if(keys[registers[reg_X]]){
                         pc += 2;
-                        printf("Key is pressed, skip next operation\n");
-                    } else {
-                        printf("Key is not pressed, skip next operation\n");
                     }
 
                 } else if(op_xxNN == 0xA1){
 
                     if(keys[registers[reg_X]] == 0){
                         pc += 2;
-                        printf("Key is not pressed, skip next operation\n");
-                    } else {
-                        printf("Key is pressed, do not skip next operation\n");
                     }
 
                 }
@@ -416,14 +470,19 @@ int main(int args, char* argv[]){
                     // ASSIGN delay timer to reg_X
                     case 0x15:
 
-
+                        pthread_mutex_lock(&thread_lock);
                         delay_timer = registers[reg_X];
+                        pthread_mutex_unlock(&thread_lock);
+
                         break;
 
                     // ASSIGN sound timer to reg_X
                     case 0x18:
 
+                        pthread_mutex_lock(&thread_lock);
                         sound_timer = registers[reg_X];
+                        pthread_mutex_unlock(&thread_lock);
+
                         break;
 
                     // ASSIGN pointer += reg_X
@@ -477,24 +536,13 @@ int main(int args, char* argv[]){
 
         //Print newline, move to next instruction
         pc+= 2;
-        SDL_Delay(1);
-
-
-        // Decrement delay and sound timers
-        // NOTE: these will be moved to a 60hz thread eventually
-        if(delay_timer > 0){
-            delay_timer--;
-        }
-
-        if(sound_timer > 0){
-            sound_timer--;
-        }
-
-        update_display();
+        SDL_Delay(2);
 
     }
 
-    quit_sdl();
+    free(thread_args);
     free(memory);
     return 0;
 }
+
+
