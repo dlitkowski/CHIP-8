@@ -463,7 +463,7 @@ int main(int args, char* argv[]){
                     // ASSIGN reg_X to the next key pressed
                     case 0x0A:
 
-                        char keypressed = key_wait();
+                        char keypressed = key_wait(keys);
                         registers[reg_X] = keypressed;
                         break;
 
